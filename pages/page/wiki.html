@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Recette</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../visual/wiki.css">
+</head>
+
+<body>
+
+<p class="enonce_regles">Devine la recette</p>
+<div class="navigation">
+	<div class="selector">
+		<select id="select"></select>
+	</div>
+</div>
+
+<div class="contenu">
+	<div class="input">
+		<div class="blocrouge">
+			<input type="text" name="proposition" id="prop">
+			<label for="prop"> Mot à ajouter </label>	
+			<div id="pages"></div>
+		</div>
+	<div class="end" id="end"></div>
+</div>
+<div class="navigation">
+	<input type="button" class="btn" id="devoiler" value="Je ne sais pas..." onclick="devoiler_reponse()"></button>
+</div>
+
+</body>
+	<script type="module" src="../../assets/main.js"></script>
+	<script src="../game/wiki.js"></script>	
+</html>

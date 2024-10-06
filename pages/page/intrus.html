@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trouver l'intrus</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../visual/intrus.css">
+</head>
+
+<body>
+
+<div class="manches">
+	<input type="button" class="btn" id="manche0" value="Manche 0" onclick="selection_manche(this.id)"></button>
+	<input type="button" class="btn" id="manche1" value="Manche 1" onclick="selection_manche(this.id)"></button>
+	<input type="button" class="btn" id="manche2" value="Manche 2" onclick="selection_manche(this.id)"></button>
+	<input type="button" class="btn" id="manche3" value="Manche 3" onclick="selection_manche(this.id)"></button>
+</div>
+
+<div class="tbl-header">
+	<table >
+		<thead>
+			<th id="nom_manche" class="regles"></th>
+		</thead>
+	</table>
+
+	<div class="tbl-content">
+		<table >
+			<tbody>
+				<tr>
+					<td id="0" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="1" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="2" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="3" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="4" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="5" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="6" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+				<tr>
+					<td id="7" class="colo" onclick="correct(this.id)"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+
+</body>
+	<script type="module" src="../../assets/main.js"></script>
+	<script src="../game/intrus.js"></script>
+</html>

@@ -1,0 +1,94 @@
+/* Afficher la question et la réponse*/
+
+.question{
+	font-size: x-large;
+	text-align: center;
+	color: #315146;
+	}
+
+.reponse{
+	color: #315146;
+	font-size: x-large;
+	text-align: center;
+	color: #000;
+}
+
+.contenu_reponse {
+	margin-top: 10px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	margin-bottom: 5px;
+}
+
+.question_reponse {
+	background-color: white;
+	filter: drop-shadow(0 0 0.3rem var(--shadow));
+	padding: 25px;
+	font-family: Police1;
+	line-height: normal;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Couleur des cases par joueur */
+
+.joueur{
+	width: 15%;
+}
+
+.joueurs, .contenu_reponse {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.joueur:hover{
+	cursor: default;
+}
+
+#papa {
+	background-color: #CB4483;}
+
+#sam {
+	background-color: #F6E472;}
+
+#maman {
+	background-color: #FCAE86;}
+
+
+#aitor {
+	background-color: #604da8;}
+
+#zaz {
+	background-color: #67A580;}
+
+#id1, #id9, #id6, #id20 {
+	background-color: #CB4483;
+	color: white;
+}
+
+
+#id3, #id16, #id13, #id19 {
+	background-color: #F6E472;
+	color: white;
+}
+
+#id2, #id5, #id11, #id18 {
+	background-color: #FCAE86;
+	color: white;
+}
+
+
+#id4, #id7, #id10, #id15 {
+	background-color: #604da8;
+	color: white;
+}
+
+#id8, #id12, #id14, #id17 {
+	background-color: #67A580;
+	color: white;
+}

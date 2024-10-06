@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trouver le ?</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../visual/guess_ai.css">
+</head>
+
+<body>
+<div id="container2">
+	<select name="Manche" id="manche-select">
+	</select>
+</div>
+
+<div id="container">
+		<div class="center">
+		  <button class="btn indice" id="1" onclick="Afficher_image(1)">
+				<span>Indice 1</span>
+			</button>
+
+			<button class="btn indice" id="2" onclick="Afficher_image(this.id)">
+					<span>Indice 2</span>
+			</button>
+			
+			<button class="btn indice" id="3" onclick="Afficher_image(this.id)">
+				<span>Indice 3</span>
+			</button>
+		</div>
+</div>
+
+
+<div id = "bloc_image">
+	<img src="../../assets/img/guess_ai/rules.png" id="image">
+</div>
+ 
+</body>
+	<script type="module" src="../../assets/main.js"></script>
+	<script src="../game/guess_ai.js"></script>
+</html>
+

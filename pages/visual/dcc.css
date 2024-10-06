@@ -1,0 +1,74 @@
+/* De manière générale */
+.bloc {
+	margin: 50px 60px;
+	font-size: x-large;
+	background-color: var(--color-background);
+	padding: 2em;
+	font-family: Police1;
+	color: black;
+}
+
+/* Boutons Duo Carre ou Cash */
+
+.btns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	min-width: 30% !important;
+	}
+
+/* Navigation entre les pages */
+	
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+/* Afficher les propositions Duo, Carre ou Cash */
+	
+.pduo, .pcarre, .pcash {
+	text-decoration: none;
+	background:#E3D9CF;
+	border-radius: 5px;
+	padding: 35px 10px;
+	height: auto;
+	width: 30%;
+	text-align: center;
+	font-size: auto;
+	margin: 20px;
+	}
+
+.pduo, .pcarre, .pcash:hover{
+	cursor: pointer;
+}
+
+.pcarre {
+	width: 40%;
+}
+
+.pcash {
+	width: 90%;}
+
+/* Questions */
+
+.question {
+	color: #000;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.reponse {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.bloc {
+	height: 500px;
+}
