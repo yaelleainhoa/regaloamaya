@@ -83,12 +83,11 @@ var reponses = [
 			id++;
 			raz();
 		}
+		document.getElementById("reponse").classList.add("btn") ;
 	}
 
 	function reponse() {
-
 		document.getElementById("reponse").textContent = reponses[id] ;
-		document.getElementById("reponse").style.color = "black" ;
 		document.getElementById("reponse").style.style = "bold" ;
-
+		document.getElementById("reponse").classList.remove("btn") ;
 	} 

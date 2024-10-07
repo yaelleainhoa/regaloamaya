@@ -1,17 +1,18 @@
 /* semantic color variables for this project */
 :root {
-  --color-button: #e6d684;
-  --button-hover:#eab471;
+  --color-button: #ffffff1e;
+  --button-hover:#ea7171af;
   --button-text-color: #ffffff;
   --button-width: 150px;
   --button-height: 50px;
   --button-font-size: 20px;
 
   --color-text: #ffffff;
-  --color-false: #fb6a4d;
-  --color-true: #4cf28b;
-  --color-false-hover: #f24a28;
-  --color-true-hover: #29e270;
+  --color-false: #952009b4;
+  --color-true: #19793eb6;
+  --color-false-hover: #952009ce;
+  --color-true-hover: #19793ed3;
+  --color-header: #282828cf;
 
   --color-rules: #fffcfc;
 
@@ -20,7 +21,7 @@
   --font-size:16px;
   --icon-width:20px;
 
-  --shadow: #dbc5f5;  
+  --shadow: #0006;  
 }
 
 *,
@@ -55,11 +56,11 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 40px auto;
+  margin: 5px auto;
 
 
 
-  background: linear-gradient(0deg, #9557ff89, #986cff35) no-repeat 50% fixed, url(img/background.png) no-repeat 50% fixed;
+  background: linear-gradient(0deg, #a5c7ec89, #0c076235) no-repeat 50% fixed, url(img/background.png) no-repeat 50% fixed;
   background-size: auto;
   background-size: cover;
     background-size: auto;
@@ -71,37 +72,38 @@ button:hover{
 }
 
 /*Les polices*/
+
 @font-face {
   font-family: "Police1";
-  src: url('assets/polices/Police1.ttf');
+  src: url('/assets/polices/manga.ttf') format("truetype");
 }
 
 @font-face {
   font-family: "Police2";
-  src: url('assets/polices/Police2.ttf');
+  src: url('/assets/polices/Police2.ttf');
 }
 
 @font-face {
   font-family: "Police3";
-  src: url('assets/polices/Police3.ttf');
+  src: url('/assets/polices/Police3.ttf');
 }
 
 @font-face {
   font-family: "Police4";
-  src: url('assets/polices/Police4.ttf');
+  src: url('/assets/polices/Police4.ttf');
 }
 
 @font-face {
   font-family: "Police5";
-  src: url('assets/polices/Police5.ttf');
+  src: url('/assets/polices/Police5.ttf');
 }
 
 @font-face {
   font-family: "Police8";
-  src: url('assets/polices/Police8.otf');
+  src: url('/assets/polices/Police8.otf');
 }
 
 @font-face {
   font-family: "Police9";
-  src: url('assets/polices/Police9.ttf');
+  src: url('/assets/polices/Police9.ttf');
 }

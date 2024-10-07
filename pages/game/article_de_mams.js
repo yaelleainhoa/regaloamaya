@@ -43,12 +43,11 @@ var reponses = [
 			id++;
 			raz();
 		}
+		document.getElementById("solution").classList.add("btn") ;
 	}
 
  	function reponse() {
 		document.getElementById("solution").textContent = reponses[id] ;
-		document.getElementById("solution").style.fontFamily = "Police1" ;
-		document.getElementById("solution").style.paddingBottom = "10px" ;
-		document.getElementById("solution").style.paddingTop = "10px" ;
-
+		document.getElementById("solution").style.style = "bold" ;
+		document.getElementById("solution").classList.remove("btn") ;
 	}

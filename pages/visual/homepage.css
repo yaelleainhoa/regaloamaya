@@ -40,9 +40,8 @@ body {
     left: 0;
     right:0;
     bottom: 0;
-    background: hsl(258, 100%, 86%); 
+    background: hsl(0, 100%, 86%); 
     border-radius: 70% 70% 70% 70%;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c87ef2', endColorstr='#95909b#db2790',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     content: '';
     opacity: 0;
         -webkit-transition: opacity 0.9s ease 0s; 

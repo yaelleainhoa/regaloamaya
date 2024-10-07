@@ -43,7 +43,7 @@ td{
 }
 
 td:hover {
-    background: white;
+    background: var(--button-hover);
 }
 
 .manches {
@@ -54,13 +54,13 @@ height: 80px;
 }
 
 .answer{
-    background-color: aliceblue;
+    background-color: var(--color-button);
 }
 
 .colo {
 text-align: center;
 font-size: 20px;
-color: black;
+color: white;
 }
 
 .colo:hover {

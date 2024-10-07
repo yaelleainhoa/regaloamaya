@@ -27,7 +27,7 @@
 
 .textToDrag{
 	width: fit-content;
-	font-family: comic sans ms;
+	font-family: Police1;
 	font-size: 18px;
 	letter-spacing: 1px;
 	border-spacing: 1rem;
@@ -53,7 +53,9 @@ img {
 }
 
 .draggable:hover  {
-	box-shadow: 5px 5px 10px var(--shadow);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
 	border-radius: 30px;
 	cursor: pointer}
 
