@@ -10,11 +10,7 @@ export const games = [
     ["exs", "Qui partage un(e) ex ?"],
     ["guess_ai", "Qui est ce ?"],
     ["fais_deviner", "Fais deviner"],
-
-/*    ["vf", "Vrai ou faux"],
+    ["vf", "Vrai ou faux"],
     ["dcc", "Duo carré ou cache"],
     ["audio", "Audio"],
-    ["guess_image", "Deviner image"],
-    ["guess_image_indices", "Deviner image avec indices"],
-     */
 ]
