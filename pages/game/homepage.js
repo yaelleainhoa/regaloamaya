@@ -14,6 +14,9 @@ function setGames()
         var jeu = document.createElement("div");
         jeu.classList.add("jeu");
 
+        var gameImgNb = i%13;
+        jeu.style.backgroundImage = "url('../../assets/img/game"+gameImgNb+".png')"
+
         var title = document.createElement("h1");
         title.innerHTML = "Jeu "+(i+1).toString();
         jeu.appendChild(title);
