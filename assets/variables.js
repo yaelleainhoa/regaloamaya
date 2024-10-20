@@ -1,6 +1,8 @@
 export const games = [
     ["guess_image", "Qui est ce?"],
     ["maladie", "De quoi souffre ce patient ?"],
+    ["frise_cinema", "Le bon acteur"],
+    ["frise_yt", "Le bon youtubeur"],
     ["frise", "Le bon prénom"],
     ["guess_ia", "Qui fait quoi ?"],
     ["drag_and_drop", "A qui l'animal ?"],

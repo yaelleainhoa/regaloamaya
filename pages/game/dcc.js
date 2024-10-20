@@ -1,130 +1,160 @@
-var questions = [
-	"",
-	"Quel était le numéro d'Iker Muniain lors de la finale d'Europa League ?",
-	"À combien s'élève la série en cours de défaites en finale de coupe du roi de l'Athletic Club ?",
-	"Qui joue Jimmy Conway dans les affranchis ?",
-	"Qui tue Christopher Moltisanti dans les Sopranos ?",
-	"Marvel - Combien y a-t-il de pierres d'infini ?",
-	"Marvel - Quelle pierre possède Dr. Strange ?",
-	"Marvel - Qui a tué Iron Man ?",
-	"Marvel - Avec quoi se bat Thor (2 armes) ?",
-	"Marvel - Quel héros a survécu au claquement de doigts de Thanos et revient 2 ans plus tard sans avoir vielli ?",
-	"Séries/Films - Dans Peaky Blinders, combien Thomas Shelby a-t-il de frères et soeurs ?",
-	"Séries/Films - Dans Mystère à Venise qui a tué la voyante ?",
-	"Séries/Films - Dans Coco, comment est mort le père de Coco ?",
-	"Séries/Films - Comment Marin voulait appeler ses enfant avant qu'ils ne meurent ?",
-	"Séries/Films - Quelle capitale est le nom d'un personnage dans Casa de Papel et dans Mentaliste ?",
-	"Handball/Aitor - Au bout de combien de 2minutes la table doit prévenir l'arbitre pour faire sortir son fils ?",
-	"Handball/Aitor - Quand Aitor est tombé sans pouvoir se relever car il avait l'Osgood Schlatter depuis 1 an et demi, qu'a dit son père ?",
-	"Handball/Aitor - A quel poste, Aitor n'a jamais joué en match ?",
-	"Very Bad Trip - Dans Very Bad Trip 1, quel personnage s'apprête à se marier ?",
-	"Very Bad Trip - Dans Very Bad Trip 2, pour quel pays s'envolent les 4 amis ?",
-	"Very Bad Trip - Dans Very Bad Trip 3, Alan rentre chez lui en prenant l'autoroute après avoir acheté une ... ?",
-	];
+var questions_reponses = [
+	["Décathlon - Dans quelle ville se trouve le siège social ?", 
+	[
+		"Villeneuve d'Ascq",
+		"Bayonne",
+		"Tourcoing",
+		"Marc en Baroeul"
+	]],
+	["Décathlon - Quelle est la marque préférée de Central Cee ?", 
+		[
+			"Quechua",
+			"Prada",
+			"Dior",
+			"Kalenji"
+	]],
+	["Cuisine - Quelle est la spécialité de Kevin dans The Office ?", 
+		[
+			"Chili",
+			"Bolognaise",
+			"Cheesecake",
+			"Tacos"
+	]],
+	["Cuisine - De quel dessert Bree essaie de voler la recette chez Katherine ?", 
+		[
+			"Tarte au citron meringuée",
+			"Gâteau renversé à l'ananas",
+			"Muffins aux myrtilles",
+			"Cheesecake à la fraise"
+	]],
+	["Cuisine - Quel est le plat qu'aime le - Luffy selon Oda ?", 
+		[
+			"Tarte aux cerises",
+			"Salade",
+			"Gigot d'agneau",
+			"Prune séchée"
+	]],
+	["Cuisine - Que mangent Chandler et Rachel dans un couloir ?", 
+		[
+			"Cheesecake",
+			"Pizza",
+			"Mac and Cheese",
+			"Diplomate"
+	]],
+	["LOL - Qui est présent dans LOL et dans LOL ?", 
+		[
+			"Pierre Niney",
+			"Eric Judor",
+			"Jinx",
+			"Vi"
+	]],
+	["LOL - Quel excellent acteur de la bande à Fifi a terminé 3e de la 1ère saison de LOL qui rit sort ?", 
+		[
+			"Tarek Boudali",
+			"Gérard Jugnot",
+			"Philippe Lacheau (fifi)",
+			"Julien Arruti"
+	]],
+	["LOL - Dans quelle ville partent en voyage scolaire Lola et ses copains dans le film LOL ?", 
+		[
+			"Londres",
+			"Barcelone",
+			"Berlin",
+			"New York"
+	]],
+	["LOL - Que signifie l'acronyme LOL dans le sens MDR ?", 
+		[
+			"Laughing Out Loud",
+			"Loose Our Lord",
+			"Lost Our Laugh",
+			"Love Our Lambs"
+	]],
+	["LOL - Qui joue le rôle de Lola dans LOL USA ?", 
+		[
+			"Miley Cyrus",
+			"Demi Moore",
+			"Julia Robers",
+			"Taylor Swift"
+	]],
+	["Politique - Dans l'annonce pour trouver des collocs, quelle condition impose Meredith Grey ?", 
+		[
+			"Ne pas Voter Bush",
+			"Voter Obama",
+			"Etre démocrate",
+			"Voter aux élections"
+	]],
+	["Politique - Qui a joué dans Days of our Lives (comme Joey finalement) ?", 
+		[
+			"Donald Trump",
+			"Arnold Schwazenegger",
+			"Cynthia Nixon",
+			"Kal Penn"
+	]],
+	["Politique - Pour quelles élections se présente Bree à la fin de Desperate Housewives ?", 
+		[
+			"Chambre Basse des Représentants du Kentucky",
+			"Chambre Haute du corps législatif du Kentucky (Sénat)",
+			"Présidente de l'état du Kentucky",
+			"Présidente des USA rien que ça"
+	]],
+	["Politique - Avant d'aider Annalise Keating, d'où a été virée Olivia Pope ?", 
+		[
+			"Maison Blanche",
+			"Maire de Washington",
+			"Cour suprême",
+			"Respo com de l'ESBVA"
+	]],
+	["Sport - Quelle est l'équipe de basketball préférée de Joey Tribiani ?", 
+		[
+			"Les NY Knicks",
+			"Les Brooklyn Nets",
+			"Les Los Angles Lakers",
+			"Les Chicago Bulls"
+	]],
+	["Sport - De quel personnage de B99 l'acteur a joué en NFL ?", 
+		[
+			"Terry",
+			"Holt",
+			"Hitchcock",
+			"La Vautour (Vulture)"
+	]],
+	["Sport - Complète ce nom de film qu'on adorait petits: 'Joue la comme ...'", 
+		[
+			"Beckham",
+			"Mbappé",
+			"Pelé",
+			"Maradonna"
+	]],
+	["Sport - A combien de joueurs par équipe se joue le Boufbowl ?", 
+		[
+			"5",
+			"6",
+			"7",
+			"8"
+	]],
+	["Art - Dans quel endroit Moriarty vole les joyaux de la couronne dans Sherlock ?", 
+		[
+			"Jewel House",
+			"British Museum",
+			"Victoria & Albert Museum",
+			"Buckigham Palace"
+	]],
+	["Art - De quel medium est inspiré le nom de série 'Grey's anatomy' ?", 
+		[
+			"Livre",
+			"Chanson",
+			"Film",
+			"Photographie"
+	]],
+	["Art - Dans les romans tirés de la série Monk, de quel point de vue suit on l'histoire ?", 
+		[
+			"Natalie",
+			"Adrien Monk",
+			"La fille de Trudy",
+			"Stottlemeyer"
+	]]
+];
 
-var propositions = [
-	/* Réponse de la question 1 -- 0 -> 3*/
-	"19",
-	"27",
-	"10",
-	"30",
-	/* Réponse de la question 2 -- 4 -> 7*/
-	"6",
-	"4",
-	"3",
-	"10",
-	/* Réponse de la question 3 -- 8 -> 11*/
-	"Robert De Niro ",
-	"Alfredo Pacino",
-	"Ray Liotta ",
-	"Henry Hill",
-	/* Réponse de la question 4 -- 12 -> 15*/
-	"Tony Soprano",
-	"Paulie Gualtieri",
-	"Silvio Dante",
-	"Salvatore « Big Pussy » Bonpensiero ",	
-	/* Réponse de la question 5 -- 16 -> 19*/
-	"6",
-	"10",
-	"5",
-	"7",		
-	/* Réponse de la question 6 -- 20 -> 23*/
-	"Temps",
-	"Ame",
-	"Réalité",
-	"Espace",		
-	/* Réponse de la question 7 -- 24 -> 27*/
-	"Tony Stark",
-	"Thanos",
-	"Dr. Strange",
-	"Peter Parker",		
-	/* Réponse de la question 16 -- 60 -> 63*/
-	"Marteau & Hache",
-	"Marteau & Bouclier",
-	"Marteau & Pistolet",
-	"Marteau & Epée",	
-	/* Réponse de la question 17 -- 64 -> 67*/
-	"Antman",
-	"Captain Marvel",
-	"Captain America",
-	"Iron Man",
-	/* Réponse de la question 8 -- 28 -> 31*/
-	"4",
-	"1",
-	"2",
-	"3",			
-	/* Réponse de la question 9 -- 32 -> 35*/
-	"La mère de la victime précédente",
-	"L'autrice",
-	"Le policier",
-	"Le médecin",	
-	/* Réponse de la question 10 -- 36 -> 39*/
-	"Empoisonné par son ami",
-	"Mal digeré un chorizo",
-	"Suicide",
-	"Il n'est pas mort",	
-	/* Réponse de la question 11 -- 40 -> 43*/
-	"Marin Jr",
-	"Némo",
-	"Sorry",
-	"Martin",	
-	/* Réponse de la question 12 -- 44 -> 47*/
-	"Lisbonne",
-	"Bogota",
-	"Berlin",
-	"Paris",			
-	/* Réponse de la question 13 -- 48 -> 51*/
-	"3",
-	"5",
-	"2",
-	"4",		
-	/* Réponse de la question 14 -- 52 -> 55*/
-	"Lève toi flemmard !",
-	"Tu as mal où ?",
-	"Est-ce que tu vas bien ?",
-	"Bien joué !",
-	/* Réponse de la question 15 -- 56 -> 59*/
-	"Gardien",
-	"Demi centre",
-	"Ailier",
-	"Arrière",							
-	/* Réponse de la question 18 -- 68 -> 71*/
-	"Doug",
-	"Alan",
-	"Stu",
-	"Phil",			
-	/* Réponse de la question 19 -- 72 -> 75*/
-	"Thaïlande",
-	"Mexique",
-	"Japon",
-	"Brésil",			
-	/* réponse de la question 20 -- 76 -> 79*/
-	"Girafe",
-	"Voiture",
-	"Bague",
-	"Maison",		
-
-	];
 
 var id = 0;
 var test = "";
@@ -137,13 +167,7 @@ document.getElementById("next").style.color = "white";
 /* Navigation entre les questions */
 
 	function raz() {
-	if (id === 0) {
-		document.getElementById("previous").style.backgroundColor = "transparent";
-		document.getElementById("previous").style.color = "transparent";}
-	else {
-		document.getElementById("previous").style.backgroundColor = "#668c6f";
-		document.getElementById("previous").style.color = "#fff";}
-	if(id === questions.length - 1) {
+	if(id === questions_reponses.length - 1) {
 		document.getElementById("next").style.backgroundColor = "transparent";
 		document.getElementById("next").style.color = "transparent";}
 	else {
@@ -184,8 +208,8 @@ document.getElementById("next").style.color = "white";
 		afficher_question();}
 
 	function afficher_question() {
-	
-		document.getElementById("question").textContent = questions[id];
+		console.log(questions_reponses, id)
+		document.getElementById("question").textContent = questions_reponses[id][0];
 	}
 /* Duo, carré ou Cash */
 
@@ -222,8 +246,8 @@ document.getElementById("next").style.color = "white";
 			var res = duo_gen();
 			for (var j = 0 ; j < 2 ; j ++) {
 				var resid = "duo0" + j ; 
-				var k = 4*(id-1) + res[j];
-				document.getElementById(resid).textContent = propositions[k];
+				var k = res[j];
+				document.getElementById(resid).textContent = questions_reponses[id][1][k];
 				if (res[j] === 0) {document.getElementById(resid).setAttribute("name","bonne-réponse");}
 				else {document.getElementById(resid).setAttribute("name"," ");}
 		}	
@@ -239,8 +263,8 @@ document.getElementById("next").style.color = "white";
 			var res = carre_gen();
 			for (var j = 0 ; j < 4 ; j ++) {
 			var resid = "car0" + j ; 
-			var k = 4*(id-1) + res[j];
-			document.getElementById(resid).textContent = propositions[k];
+			var k = res[j];
+			document.getElementById(resid).textContent = questions_reponses[id][1][k];;
 			if (res[j] === 0) {document.getElementById(resid).setAttribute("name","bonne-réponse");}
 			else {document.getElementById(resid).setAttribute("name"," ");}
 		}
@@ -260,8 +284,7 @@ document.getElementById("next").style.color = "white";
 	function resultatcash() {
 		var reponse ="";
 		var mauvaiseReponse = "";
-		var cer = 4*(id-1);
-		document.getElementById("cas00").textContent = propositions[cer];
+		document.getElementById("cas00").textContent = questions_reponses[id][1][0];
 		document.getElementById("cas00").style.backgroundColor = "#45C49C";
 		document.getElementById("cas00").style.boxShadow="5px 5px 10px";
 	}
@@ -272,7 +295,7 @@ document.getElementById("next").style.color = "white";
 			var EltListe = document.querySelectorAll('[name="bonne-réponse"]');
 			var bonneReponse = "";
 
-			if (document.getElementById(clicked_id).textContent === propositions[4*(id-1)]) 
+			if (document.getElementById(clicked_id).textContent === questions_reponses[id][1][0]) 
 					{document.getElementById(clicked_id).style.backgroundColor = "#45C49C";
 					document.getElementById(clicked_id).style.boxShadow="5px 5px 10px";}
 			
@@ -297,3 +320,5 @@ document.getElementById("next").style.color = "white";
 
 			}
 		}		
+
+afficher_question()
