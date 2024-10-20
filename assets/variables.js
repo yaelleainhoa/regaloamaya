@@ -4,6 +4,7 @@ export const games = [
     ["frise_cinema", "Le bon acteur"],
     ["frise_yt", "Le bon youtubeur"],
     ["frise", "Le bon prénom"],
+    ["guess_flag_mix", "On s'emmêle les drapeaux"],
     ["guess_ia", "Qui fait quoi ?"],
     ["drag_and_drop", "A qui l'animal ?"],
     ["intrus", "Trouver l'intrus"],

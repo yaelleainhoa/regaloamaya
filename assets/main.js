@@ -8,7 +8,6 @@ function getCurrentPageIndex() {
     const currentPage = window.location.href;
     let matches = currentPage.match(/\d+/g);
     let number = matches[matches.length-1];
-    console.log(currentPage, number)
     return parseInt(number,10);
 }
 
