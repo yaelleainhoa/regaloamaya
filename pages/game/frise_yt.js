@@ -1,25 +1,22 @@
 
-tableau_reponse = ["Meredith",
-			"Jo",
-			"Joe",
-			"Cristina",
-			"Margaret",
-			'Ellis',
-			'Georges',
-			"Olivia",
-			'Alex',
-			'Jackson',
-			'Matthew',
-			'Nicole',
-			'Charles',
-			'Reed',
-			'Teddy',
-			'Gary',
-			'Derek',
-			'Sydney',
-			'Miranda',
-			'Amelia',
-			'BokHee'
+tableau_reponse = [
+	"Mister V",
+	"Joyca",
+	'GMK',
+	'Inoxtag',
+	'Mastu',
+	'Maghla',
+	'Gotaga',
+	'Mcfly et Carlito',
+	'BigFront et Bully',
+	"Doigby",
+	'Gaelle Garcia Diaz',
+	'Natoo',
+	'Michou',
+	'Henry Tran',
+	'Kevin Tran',
+	'Louis San',
+	'Mont Corvo'
 ]
 
 for (let i = 0; i < tableau_reponse.length; i++)
@@ -60,5 +57,5 @@ document.getElementById('image').addEventListener("click", function() {
   });
 
 function Valider() {
-	document.getElementById('image').src = "../../assets/img/ga/solution.png" 
+	document.getElementById('image').src = "../../assets/img/yt/solution.png" 
 }

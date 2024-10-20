@@ -1,25 +1,25 @@
 
-tableau_reponse = ["Meredith",
-			"Jo",
-			"Joe",
-			"Cristina",
-			"Margaret",
-			'Ellis',
-			'Georges',
-			"Olivia",
-			'Alex',
-			'Jackson',
-			'Matthew',
-			'Nicole',
-			'Charles',
-			'Reed',
-			'Teddy',
-			'Gary',
-			'Derek',
-			'Sydney',
-			'Miranda',
-			'Amelia',
-			'BokHee'
+tableau_reponse = ["Brad Pitt",
+			"Morgan Freeman",
+			"Matt Damon",
+			"Anne Hathaway",
+			"Emily Blunt",
+			'Cillian Murphy',
+			'Leonardo Di Caprio',
+			"Margot Robbie",
+			'Dua Lipa',
+			'Henry Cavill',
+			'Amy Adams',
+			'John Krasinski',
+			'Antonio Banderas',
+			'Teri Hatcher',
+			'Eva Longoria',
+			'Andy Samberg',
+			'Sandra Oh',
+			'Patrick Dempsey',
+			'Colin Firth',
+			'Meryl Streep',
+			'Viola Davis'
 ]
 
 for (let i = 0; i < tableau_reponse.length; i++)
@@ -60,5 +60,5 @@ document.getElementById('image').addEventListener("click", function() {
   });
 
 function Valider() {
-	document.getElementById('image').src = "../../assets/img/ga/solution.png" 
+	document.getElementById('image').src = "../../assets/img/cinema/solution.png" 
 }
