@@ -1,35 +1,37 @@
 images  = [
-	"../../assets/img/drag_and_drop/brigitte_bardot.png", //0
-	"../../assets/img/drag_and_drop/carla_bruni.png", //1
-	"../../assets/img/drag_and_drop/dali.png", //2
-	"../../assets/img/drag_and_drop/georges_brassens.png", //3
-	"../../assets/img/drag_and_drop/hillary_clint.png", //4
-	"../../assets/img/drag_and_drop/joe_dassin.png", //5
-	"../../assets/img/drag_and_drop/marine_lepen.png", //6
-	"../../assets/img/drag_and_drop/walt_disney.png", //7
+	"../../assets/img/drag_and_drop/99.png", //1
+	"../../assets/img/drag_and_drop/friends.png", //2
+	"../../assets/img/drag_and_drop/mentalist.png", //3
+	"../../assets/img/drag_and_drop/dh.png", //4
+	"../../assets/img/drag_and_drop/bbt.png", //5
+	"../../assets/img/drag_and_drop/ga.png", //6
+	"../../assets/img/drag_and_drop/got.png", //7
+	"../../assets/img/drag_and_drop/monk.png", //8
+
 ]
 
 reponses = [
-	"Hillary Clinton", // 0
-	"Dali", // 1
-	"Marine Le Pen", // 2 
-	"Walt Disney", // 3
-	"Carla Bruni", // 4
-	"Joe Dassin", // 5
-	"Brigitte Bardot", // 6
-	"Georges Brassens", //7
+	"Saison 1", // 0
+	"Saison 2", // 1
+	"Saison 3", // 2 
+	"Saison 4", // 3
+	"Saison 5", // 4
+	"Saison 6", // 5
+	"Saison 7", // 6
+	"Saison 8", //7
 
 ]
 
 bonnes_reponses = [
-	"Brigitte Bardot",
-	"Carla Bruni",
-	"Dali",
-	"Georges Brassens",
-	"Hillary Clinton",
-	"Joe Dassin",
-	"Marine Le Pen",
-	"Walt Disney"
+	"Saison 6", // 5
+	"Saison 4", // 3
+	"Saison 7", // 6
+	"Saison 8", //7
+	"Saison 2", // 1
+	"Saison 5", // 4
+	"Saison 3", // 2 
+	"Saison 1", // 0
+
 ]
 
 score  = [

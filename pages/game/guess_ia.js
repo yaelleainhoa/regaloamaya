@@ -1,5 +1,4 @@
 var images = [
-"../../assets/img/guess_ia/25.png",
 "../../assets/img/guess_ia/1.png",
 "../../assets/img/guess_ia/2.png",
 "../../assets/img/guess_ia/3.png",
@@ -25,36 +24,40 @@ var images = [
 "../../assets/img/guess_ia/23.png",
 "../../assets/img/guess_ia/24.png",
 "../../assets/img/guess_ia/25.png",
+"../../assets/img/guess_ia/26.png",
+"../../assets/img/guess_ia/27.png",
+"../../assets/img/guess_ia/28.png",
+"../../assets/img/guess_ia/29.png",
+"../../assets/img/guess_ia/30.png",
+"../../assets/img/guess_ia/31.png",
+"../../assets/img/guess_ia/32.png",
+"../../assets/img/guess_ia/33.png",
+"../../assets/img/guess_ia/34.png",
+"../../assets/img/guess_ia/35.png",
+"../../assets/img/guess_ia/36.png",
+"../../assets/img/guess_ia/37.png",
+"../../assets/img/guess_ia/38.png",
+"../../assets/img/guess_ia/39.png",
+"../../assets/img/guess_ia/40.png",
+"../../assets/img/guess_ia/41.png",
+"../../assets/img/guess_ia/42.png",
+"../../assets/img/guess_ia/43.png",
+"../../assets/img/guess_ia/44.png",
+"../../assets/img/guess_ia/45.png",
+"../../assets/img/guess_ia/46.png",
+"../../assets/img/guess_ia/47.png",
+"../../assets/img/guess_ia/48.png",
+"../../assets/img/guess_ia/49.png",
+"../../assets/img/guess_ia/50.png",
+"../../assets/img/guess_ia/51.png",
+"../../assets/img/guess_ia/52.png",
+"../../assets/img/guess_ia/53.png",
+"../../assets/img/guess_ia/54.png",
+"../../assets/img/guess_ia/55.png",
+"../../assets/img/guess_ia/56.png",
 ]
 
-var reponses = [
-	"",
-	"Le Roi Baudoin qui joue au tennis",
-	"Robespierre mange un sandwich sur la plage",
-	"Jokic qui vote",
-	"Van Gogh qui fait de la moto",
-	"Zidane mange une gaufre sur la Grand Place",
-	"Audrey Fleurot boit une bière",
-	"Tintin danse à Pampelune",
-	"Robespierre fait du surf",
-	"Jeanne d'Arc mange un kebab",
-	"Edith Piaf fait du saut à la perche",
-	"Cleopatre fait du jardinage",
-	"Chirac court derrière un taureau",
-	"Marie Curie mange des tapas en Espagne",
-	"Sarko en prison",
-	"Marie Antoinette fait de la moto",
-	"Leon Blum pleure devant l'assemblée",
-	"Victor Hugo prend le métro",
-	"Macron & Hidalgo dans la Seine",
-	"Macron à l'usine",
-	"Che Guevara boit du thé matcha sur la plage",
-	"Queen E fume un joint",
-	"Mbappe le facteur",
-	"Dany Boon fait une rando",
-	"Johnny Hallyday fait des nems",
-	""
-]
+
 
 
 /* Initialisation de la page*/
@@ -65,8 +68,7 @@ var reponses = [
 
 	function raz() {
 		document.getElementById("image").setAttribute("src", images[id]) ;
-		document.getElementById("reponse").textContent = "Réponse" ;
-		document.getElementById("reponse").style.color = "white" ;
+	
 
 
 /* 		document.getElementById("solution").textContent = "Réponse";
@@ -83,11 +85,5 @@ var reponses = [
 			id++;
 			raz();
 		}
-		document.getElementById("reponse").classList.add("btn") ;
 	}
 
-	function reponse() {
-		document.getElementById("reponse").textContent = reponses[id] ;
-		document.getElementById("reponse").style.style = "bold" ;
-		document.getElementById("reponse").classList.remove("btn") ;
-	} 
