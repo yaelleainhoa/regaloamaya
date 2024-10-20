@@ -6,7 +6,7 @@ export const games = [
     ["frise", "Le bon prénom"],
     ["guess_flag_mix", "On s'emmêle les drapeaux"],
     ["guess_ia", "Qui fait quoi ?"],
-    ["drag_and_drop", "A qui l'animal ?"],
+    ["drag_and_drop", "Quelle saison ?"],
     ["intrus", "Trouver l'intrus"],
     ["wiki", "Devine la recette"],
     ["questions_indiv", "Questions individuelles"],
