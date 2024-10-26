@@ -1,107 +1,148 @@
-var theme = [
-	"L'intrus est un évènement qui ne s'est pas produit en 1963",
-	"L'intrus est l'évènement qui ne s'est pas produit un 5 juillet",
-	"L'intrus ne porte pas le prénom d'un de tes enfants ?",
-	"L'intrus n'est pas né au Vietnam"
-	]
+images  = [
+	"../../assets/img/intrus/4.png", //1
+	"../../assets/img/intrus/5.png", //2
+	"../../assets/img/intrus/1.png", //3
+	"../../assets/img/intrus/6.png", //4
+	"../../assets/img/intrus/2.png", //5
+	"../../assets/img/intrus/8.png", //6
+	"../../assets/img/intrus/3.png", //7
+	"../../assets/img/intrus/7.png", //8
 
-var manche = [
-	/* Première manche */ 
-	"Décès de Edith Piaf", 
-	"Mise en place du téléphone rouge entre USA et Kremlin ?", 
-	"Assassinat de JFK",  
-	"Débarquement de la baie des cochons",  
-	"Le bonze vietnamien Thich Quang Duc s’immole à Saïgon, pour protester contre les persécutions anti-bouddhistes du régime de Ngô Dinh Diêm", 
-	"Execution en Espagne du communiste Julian Grimau", 
-	"Ouverture du procès d'Auschwitz à Francfort",  
-	"Naissance de James Denton (Mike dans Desperate Housewives)", 
+]
+
+reponses = [
+	"5000 ans avant ",
+	"830 ans avant",
+	"500 ans avant",
+	"113 ans avant",
+	"46 ans avant",
+	"33 ans avant",
+	"15 ans avant",
+	"10 ans avant",
 	
-	/* Deuxième manche */
-	"Fraternisation de 14", 
-	"Naissance de Gilles Lellouche", 
-	"Naissance de Dolly la brebis",  
-	"Indépendance de l'Algérie",  
-	"Début d'une parution régulière de l'hebdomadaire satirique français Le Canard enchaîné", 
-	"Les Vieilles Canailles font leur 17e et dernier concert à Carcassonne qui fut aussi le tout dernier de Johnny Hallyday qui décèdera pile cinq mois plus tard", 
-	"Prise d'Alger en 1830",  
-	"Sortie de Moi, Moche et Méchant 3", 
-	
-	
-	/* Troisième manche */
-	"Joueur/euse de foot ayant joué à l'Athletic dont le passe temps était d'être finaliste de la coupe d'Espagne de 2009", 
-	"Président(e) de l'Assemblée Nationale sous le gouvernement ASSASSIN de MACRON", 
-	"Joueur/euse de rugby né(e) le 12 janvier 1993 à Saint-Jean-de-Luz",  
-	"Joue un Jedi possédant un sabre violet dans Star Wars",  
-	"Chanteur/euse qui a gagné Operación Triunfo", 
-	"Surnom de Irantzu Gallastegi Sodupe, membre émérite d'un groupe terroriste", 
-	"Mannequin ayant joué dans le film de son ex mari un(e) client(e) énervé(e) à La Poste",  
-	"Rappeur/euse mexicain(e) aka El ReyLa Reina de los Corridos Tumbados BFF (Best Friend Forever) de Peso Pluma", 
+]
 
-	/* Quatrième manche */
-	"Chantal Goya", 
-	"Frédéric Chau", 
-	"Marguerite Duras",  
-	"Amanda Lear",  
-	"Charles Sobhraj dit Le Serpent", 
-	"Hom Nguyen", 
-	"Frédérique Hoschedé",  
-	"Phạm Đăng Trí", ]
+bonnes_reponses = [
+	"113 ans avant", 
+	"46 ans avant",
+	"5000 ans avant",
+	"33 ans avant",
+	"830 ans avant",
+	"10 ans avant",
+	"500 ans avant",
+	"15 ans avant",
 
-var incorrect = [
-	3,
-	0,
-	2,
-	6]
+]
 
-var id  ="";
+score  = [
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+] 
 
-var nbrManche = 0;
+function setFunctionsAndCurves(){
+	var imagesToDropArea = document.getElementById("imagesToDrop");
+	var textsToDragArea = document.getElementById("textsToDrag");
+	for (let i = 0 ; i < reponses.length ; i++)
+	{
+		var imageToDropArea = document.createElement("div");
+		var imageToDropImg = document.createElement("img");
+		imageToDropImg.classList.add("image");
+		imageToDropImg.setAttribute("src", images[i]);
+		imageToDropImg.addEventListener("click", function() {
+			if (this.requestFullscreen) {
+			  this.requestFullscreen();
+			} else if (this.msRequestFullscreen) {
+			  this.msRequestFullscreen();
+			} else if (this.mozRequestFullScreen) {
+			  this.mozRequestFullScreen();
+			} else if (this.webkitRequestFullscreen) {
+			  this.webkitRequestFullscreen();
+			}
+		  });
+		imageToDropArea.setAttribute("id", "prop"+i);
+		imageToDropArea.setAttribute("ondrop", "dragDrop(event)");
+		imageToDropArea.setAttribute("ondragover", "allowDrop(event)");
+		imageToDropArea.classList.add("imageToDrop");
+		imageToDropArea.appendChild(imageToDropImg);
 
-document.getElementById("nom_manche").textContent = theme[0];
-	var j = 0;
-	for (var i = 0 ; i < 8 ; i++)
-		{
-			document.getElementById(i).classList.add("answer");
-			document.getElementById(i).textContent = manche[j + i];
-		}
+		imagesToDropArea.appendChild(imageToDropArea);
 
-		
+		var textToDragArea = document.createElement("div");
+		textToDragArea.innerText = reponses[i];
+		textToDragArea.setAttribute("id","drag"+i);
+		textToDragArea.setAttribute("ondrop","dragDrop(event)");
+		textToDragArea.setAttribute("ondragover","allowDrop(event)");
+		textToDragArea.setAttribute("draggable","true");
+		textToDragArea.setAttribute("ondragstart","dragStart(event)");
+		textToDragArea.classList.add("textToDrag");
+		textToDragArea.classList.add("draggable");
 
-function selection_manche(clicked_manche) {
-	nbrManche = clicked_manche;
-	id = clicked_manche.substr(6, 1); 
-	document.getElementById("nom_manche").textContent = theme[id];
-	var j = 8 * id;
-	for (var i = 0 ; i < 8 ; i++)
-		{
-			document.getElementById(i).classList.remove("backgroundTrue");
-			document.getElementById(i).classList.remove("backgroundFalse");
-			document.getElementById(i).classList.add("answer");
-			document.getElementById(i).textContent = manche[j + i];
-		}
-	nbrManche = parseInt(id, 4);
+		textsToDragArea.appendChild(textToDragArea);
+	}
 }
 
-function correct(clicked_id) 
+setFunctionsAndCurves();
+
+var reponse_select = ""
+var image_selectionne = 10
+var indice = 0
+
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+function dragStart(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragDrop(ev) {
+	ev.preventDefault();
+
+	reponse_select = ev.target.id
+	indice = reponse_select.substr(-1)
+
+	if(reponse_select)
+	{
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+		ev.target.style.paddingBottom = "5px";
+	}
+
+	textToDrag_selected = document.getElementById(data).innerText;
+	score[indice] = textToDrag_selected
+
+	
+	
+}
+
+
+function resultat_final()
 {
-		var j = 8 * nbrManche;
-		clicked_id = parseInt(clicked_id, 10);
-		var Elt = document.getElementById(clicked_id);
-		
-		if (clicked_id === incorrect[nbrManche])
-			{
-				Elt.classList.remove("answer");
-				Elt.classList.add("backgroundFalse");
-				Elt.style.width = "500px";
-			}
+	var carreau = ""
+	for (let i = 0 ; i < reponses.length ; i++) 
+	{
+		if (bonnes_reponses[i] == score[i]) 
+		{
+			carreau = "prop" + i.toString()
+			document.getElementById(carreau).style.backgroundColor = "#C6E5BA"
+		}
 
-		else
-			{
-				Elt.classList.remove("answer");
-				Elt.classList.add("backgroundTrue");
-				Elt.style.width = "500px";
-			}
+		else 
+		{
+			carreau = "prop" + i.toString()
+			document.getElementById(carreau).style.backgroundColor = "#FF6961"
 
-			if (nbrManche !=2) {document.getElementById(clicked_id).textContent = manche[j + clicked_id] ;}
+			var goodAnswer = document.createElement("div");
+			goodAnswer.innerText = bonnes_reponses[i];
+			goodAnswer.classList.add("textToDrag");
+			goodAnswer.style.color="white";
+			document.getElementById(carreau).appendChild(goodAnswer);
+		}
 		
+	}
 }

@@ -2,52 +2,52 @@ document.getElementById("masquer").style.display = "none";
 
 var liste_questions = [
 	"0",
-	"Comment s'appelle le gardien préféré de paps ?", 
-	"Combien de joueurs trouve-t-on sur un terrain de basket ?",
-	"Dans quel ordre sont sortis les 6 premiers volumes de la Saga Star Wars ? (I, II, III, IV, V, VI)", //
-	"Dans quel sens se lit un manga ?", //
-	"Dans quelle salle joue l'ESBVA ?",
-	"Quel capitaine mythique formé à la Txantrea a quitté le club en fin de saison ?",
-	"Citer un personnage de One Piece", //
-	"Sur quelle partie du corps pratique-t-on un TAVI ?",
-	"Quelles sont les couleurs traditionelles de l'Athletic ?",
-	"Quel est le nom du fidèle acolyte jaune usant de pouvoirs électriques pour abattre ses ennemis de la Team Rocket de Sacha Ketchum (dit Ash) qui pourrait grâce à ses pouvoirs recharger ton téléphone portable en un temps record dont l'évolution est Raichu dont la carte pourrait remplir une belle collection au côté de Dracofeu, Bulbizarre et Carapuce ?", //
-	"Dans quelle équipe joue Nikola Jokic ?",
-	"De quoi souffre une personne atteinte de neurocysticercosis ?",
-	"Qui est le personnage le plus poilu de Star Wars?", //
-	"Un patient se présente avec les symptomes suivants, quel est votre diagnostic ? Yeux rouges sans écoulement, Lèvres rouges, sèches et gercées et langue couleur fraise, Gonflement, rougeur et desquamation des pieds et des mains, Éruption cutanée avec taches rouges disséminées sur le tronc, Ganglions lymphatiques gonflés et sensibles au niveau du cou",
-	"Qui est le père de Boruto ? (point bonus si tu peux citer un autre personnage de la série, ex : Shikamaru)", //
-	"Quelle est la relation entre Luke et Leia ?", //
-	"Qu'est ce que la trichotillomanie ?",
-	"Quelle est la meilleure sélection masculine (hors USA) qui a gagné 2 coupes du monde ?",
-	"Citer un titre de l'un des films de l'univers Star Wars", //
-	"Comment s'appelle le stade aussi connu sous le nom de Cathédrale ?",
+	"Quel est le nom des 5 océans ?",
+	"De quelle ville Meredith arrive-t-elle au début de la série ?",
+	"Lorsque Kakashi fait passer le test des clochettes à sa toute jeune équipe, quel est le but caché de cette épreuve ?",
+	"Qui sauve Hawkeye et un enfant dans Avengers : L'Ère d'Ultron ?",
+	"Comment commence la dispute entre Meredith et Cristina dans la saison 10 ?",
+	"Quelle est la hiérarchie de la Marine en partant du Vice-Amiral au Matelot ?",
+	"Lorsque Steve Rogers se réveille à la fin de Captain America : First Avengers, il entend un match à la radio. En quelle année s'est déroulé ce même match ?",
+	" Quel mot est inscrit sur le tshirt que portent Robin et Franky en mmatching outif couple ?",
+	"Quel Supernovae a la prime la plus élevée au moment de leur arrivée sur l'Archipel Sabaody ?",
+	"Dans le premier film Avengers, quand Black Widow se bat contre les Chitauri, elle dit que ça lui rappelle...",
+	"Qu'est-il écrit en premier sur le post-it de Meredith et Derek ?",
+	"Dans quel arc apparaît pour la première fois Nico Robin ? (Si t'es chaud le chapitre, le tome ou l'épisode)",
+	"Que pourchasse l'équipe Ebisu lors du retour de Naruto à Konoha ?",
+	"Si Robin faisait partie de la famille, entre quels membres de la famille fêterions nous son anniversaire ?",
+	"Comment s'appelle la mère de Peter Quill ?",
+	"Quel est le nom de la monnaie dans Naruto ?",
+	"Sur Tequila Wolf, le numéro d'esclave de Robin est le...",
+	"Pourquoi le mariage de Ben et Bailey a-t-il été repoussé ?",
+	"Lors du combat de l'équipe 7 avec Haku et Zabuza, quel est l'élément déclencheur pour que Naruto active son mode Kyubi ?",
+	"Avec quel Supernovae, Luffy a dû s'allier durant l'arc Whole Cake ?",
 	]
 ;
 
 
 var liste_reponses = [
 	"0",
-	"José Angel Iribar",
-	"10 (5 par équipe !)",
-	"IV, V, VI, I, II, III !!!!",
-	"Dans le sens inverse d'un livre lol", //
-	"Palacium",
-	"Iker Muniain",
-	"Aitor valide (mais je pense que tu vas dire Luffy)", //
-	"Le coeur",
-	"Rouge et blanc",
-	"Pikachu",
-	"Denver Nuggets",
-	"De vers dans le cerveau",
-	"Chewbacca",
-	"Kawasaki",
-	"Naruto",
-	"Frères et soeurs (le bisous était une erreur)",
-	"La trichotillomanie est caractérisée par des arrachages récurrents des cheveux entraînant une perte de cheveux. Les patients qui ont une trichotillomanie tirent ou arrachent de manière répétée leurs cheveux pour des raisons non cosmétiques.",
-	"Espagne",
-	"Au bon vouloir de Sam",
-	"San Mames",
+	"East Blue, North Blue, West Blue, South Blue et Grand Line",
+	"Boston",
+	"Vérifier la cohésion des membres de l'équipe",
+	"Pietro Maximoff/Vif-Argent",
+	"Parce que Cristina demande à Bailey de prendre la place de Meredith pour la transplantation d'un foie",
+	"Vice-Amiral, Sous-Amiral, Contre-Amiral, Colonel, Capitaine, Enseigne, Lieutenant, Sergent-Chef, Sergent et Matelot",
+	"1941",
+	"Corrida",
+	"Eustass Kid",
+	"Budapest",
+	"S'aimer même quand on se déteste",
+	"Arc Whiskey Peak (epiosde 67, chapitre 114, tome 13",
+	"Un chat",
+	" Entre Yayou et papa",
+	"Meredith",
+	"Ryō",
+	"3926",
+	"Parce qu'Adèle la femme de Richard doit être opérée d'urgence",
+	"Il pense que Sasuke est mort",
+	"Capone Bege",
 ]
 ;
 

@@ -2,32 +2,33 @@
 <html>
 
 <head>
-	<title>Recette</title>
+	<title>Voix Off</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../visual/wiki.css">
+	<link rel="stylesheet" href="../visual/exs.css">
 </head>
 
 <body>
 
-<p class="enonce_regles">Devine la recette</p>
-<div class="navigation">
-	<div class="selector">
-		<select id="select"></select>
-	</div>
-</div>
-
-<div class="contenu">
-	<div class="input">
-		<div class="blocrouge">
-			<input type="text" name="proposition" id="prop">
-			<label for="prop"> Mot à ajouter </label>	
-			<div id="pages"></div>
+	<p class="enonce_regles">Pour chaque image, trouver son autre personnage (Same voix)</p>
+	<script>
+		
+	</script>
+	
+	<div class="questions">
+	
+		<div id="imagesToDrop">
 		</div>
-	<div class="end" id="end"></div>
-</div>
-<div class="navigation">
-	<input type="button" class="btn" id="devoiler" value="Je ne sais pas..." onclick="devoiler_reponse()"></button>
-</div>
+	
+		<div id="textsToDrag">
+		</div>
+	
+		<div>
+			<button class="btn" id="afficher_rep" value="Afficher la réponse" onclick="resultat_final()">
+				Réponses
+			</button>	
+		</div>
+	
+	</div>
 
 </body>
 	<script type="module" src="../../assets/main.js"></script>

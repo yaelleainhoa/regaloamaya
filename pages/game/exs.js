@@ -1,35 +1,56 @@
 images  = [
-	"../../assets/img/exs/attal.jpeg", //0
-	"../../assets/img/exs/binoche.png", //1
-	"../../assets/img/exs/enthoven.png", //2
-	"../../assets/img/exs/montebourg.png", //3
-	"../../assets/img/exs/besson.jpg", //4
-	"../../assets/img/exs/levy.png", //5
-	"../../assets/img/exs/godreche.png", //6
-	"../../assets/img/exs/kruger.png", //7
+	"../../assets/img/exs/0.png", //0
+	"../../assets/img/exs/1.png", //1
+	"../../assets/img/exs/2.png", //2
+	"../../assets/img/exs/3.png", //3
+	"../../assets/img/exs/4.png", //4
+	"../../assets/img/exs/5.png", //5
+	"../../assets/img/exs/6.png", //6
+	"../../assets/img/exs/7.png", //8
+	"../../assets/img/exs/8.png", //9
+	"../../assets/img/exs/9.png", //10
+	
+]
+
+images_reponse  = [
+	"../../assets/img/exs/10.png", //0
+	"../../assets/img/exs/11.png", //1
+	"../../assets/img/exs/12.png", //2
+	"../../assets/img/exs/13.png", //3
+	"../../assets/img/exs/14.png", //4
+	"../../assets/img/exs/15.png", //5
+	"../../assets/img/exs/16.png", //6
+	"../../assets/img/exs/17.png", //8
+	"../../assets/img/exs/18.png", //9
+	"../../assets/img/exs/19.png", //10
+	
 ]
 
 reponses = [
-	"Juliette Binoche", // 0
-	"Arnaud Montebourg", // 1
-	"Judith Godrèche", // 2 
-	"Marc Levy", // 3
-	"Raphael Enthoven", // 4
-	"Diane Kruger", // 5
-	"Luc Besson", // 6
-	"Gabriel Attal", //7
-
+	"Camille Cottin", 
+	"François Civil",
+	"Jérôme Niel",
+	"JP Zadi",
+	"Omar Sy",
+	"Orelsan", 
+	"Romain Frayssinet", 
+	"Soso Maness", 
+	"Squeezie", 
+	"Eric Judor", 
 ]
 
 bonnes_reponses = [
-	"Gabriel Attal",
-	"Juliette Binoche",
-	"Raphael Enthoven",
-	"Arnaud Montebourg",
-	"Luc Besson",
-	"Marc Levy",
-	"Judith Godrèche",
-	"Diane Kruger"
+	
+	"Jérôme Niel",
+	"Squeezie", 
+	"Soso Maness", 
+	"Camille Cottin", 
+	"Omar Sy", 
+	"JP Zadi",
+	"François Civil", 
+	"Romain Frayssinet", 
+	"Orelsan", 
+	"Eric Judor", 
 ]
 
 score  = [
@@ -51,10 +72,12 @@ function setFunctionsAndCurves(){
 	var textsToDragArea = document.getElementById("textsToDrag");
 	for (let i = 0 ; i < reponses.length ; i++)
 	{
+		console.log(i);
 		var imageToDropArea = document.createElement("div");
 		var imageToDropImg = document.createElement("img");
 		imageToDropImg.classList.add("image");
 		imageToDropImg.setAttribute("src", images[i]);
+		imageToDropImg.setAttribute("id", i);
 		imageToDropImg.addEventListener("click", function() {
 			if (this.requestFullscreen) {
 			  this.requestFullscreen();
@@ -123,8 +146,12 @@ function dragDrop(ev) {
 function resultat_final()
 {
 	var carreau = ""
+
 	for (let i = 0 ; i < reponses.length ; i++) 
 	{
+		console.log(document.getElementById(i).src)
+		document.getElementById(i).src =  images_reponse[i];
+		console.log(document.getElementById(i).src)
 		if (bonnes_reponses[i] == score[i]) 
 		{
 			carreau = "prop" + i.toString()
