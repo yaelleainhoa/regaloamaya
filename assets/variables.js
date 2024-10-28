@@ -1,16 +1,23 @@
 export const games = [
-    ["guess_image", "Qui est ce?"],
     ["maladie", "De quoi souffre ce patient ?"],
-    ["frise_cinema", "Le bon acteur"],
-    ["frise_yt", "Le bon youtubeur"],
-    ["frise", "Le bon prénom"],
-    ["guess_flag_mix", "On s'emmêle les drapeaux"],
+    ["audio", "Reconnais-tu ce son ?"],
+    ["dcc", "Duo carré ou cash ?"],
+    ["vf", "Memory"],
     ["drag_and_drop", "Quelle saison ?"],
-    // ["intrus", "Trouver l'intrus"],
-   //  ["wiki", "Devine la recette"],
+    ["exs", "Quel complice ?"],
+    ["frise_cinema", "Quel acteur ?"],
+    ["frise_yt", "Quel youtubeur ?"],
+    ["frise", "Quel médecin ?"],
+    ["guess_flag_mix", "On s'emmêle les drapeaux"],
+    ["guess_ia", "Quel enfant ?"],
+    ["guess_image", "Qui porte cette tenue ?"],
+    ["intrus", "En quelle année ?"],
+    ["questions_indiv", "Questions à thème"],
+    ["wiki", "Quel voix off"],
+    // ["fais_deviner", "Jeu vide"],
+    // ["guess_ai", "Jeu vide"], 
    // dessin one piece yaelle
-    ["questions_indiv", "Questions individuelles"],
-    ["exs", "trouver une autre idée de drag and drop?"],
-    ["dcc", "Duo carré ou cache"],
-    ["audio", "Audio"],
+    
+  
+  
 ]

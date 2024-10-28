@@ -1,104 +1,243 @@
-var questions = [
-	/* Question Aita*/
-	"Dans la saison actuelle de la Liga, le club le plus au sud est Cadix CF.",
-	"Dans la saison actuelle de la Liga, le club le plus à l'ouest est Celta de Vigo.",
-	"Dans la saison actuelle de la Liga, la communauté autonome la plus représentée est la communauté de Madrid.",
-	"Dans la saison actuelle de la Liga, 6 clubs sont en Liga depuis le XXe siècle..",
-	/* Question Amatxo*/
-	"Dans la saison actuelle de l'Euroligue, le club le plus au nord est l'ALBA Berlin.",
-	"Dans la saison actuelle de l'Euroligue, 3 villes accueillent 2 clubs (hormis Tel Aviv).",
-	"Dans la saison actuelle de l'Euroligue, deux clubs jouent dans le même stade (hormis Tel Aviv).",
-	"Dans la saison actuelle de l'Euroligue, il y a autant de joueurs espagnols dans l'effectif du Barça et du Real.",
-	/* Question Samuel*/
-	"Lors de la coupe du monde de basket 2019, la finale a eu lieu à Pekin.",
-	"Lors de la finale de la coupe du monde de basket 2019, le meilleur marqueur était Ricky Rubio.",
-	"Lors de la coupe du monde de basket 2019, les États Unis ont la meilleure moyenne de points marqués par match.",
-	"Lors de la coupe du monde de basket 2019, Luis Scola finit dans le meilleur 5 de la compétition.",
-	/* Question Aitor*/
-	"Lors de la saison NBA 2022-2023, Jokic a fait 28 triples doubles.",
-	"Lors de la saison NBA 2022-2023, la finale NBA s'est terminée sur un match 6.",
-	"Lors de la saison NBA 2022-2023, Denver a fini premier de conférence Ouest.",
-	"Lors de la saison NBA 2022-2023, San Antonio a fini dernier de la conférence Ouest.",
+images_recto  = // Ici les chemins des cartes Memory
+[ 
 	
-	];
-
-var reponses = [
-	"Faux", /* Question Aita*/
-	"Faux",
-	"Faux",
-	"Faux",
-	
-	"Faux", /* Question Amatxo */
-	"Vrai",
-	"Vrai",
-	"Faux",
-	
-	"Vrai", /* Question Samuel */
-	"Faux",
-	"Faux",
-	"Vrai",
-	
-	"Faux", /* Question Samuel */
-	"Faux",
-	"Vrai",
-	"Vrai",
-	
-
+	"../../assets/img/vf/0.png",
+	"../../assets/img/vf/1.png",
+	"../../assets/img/vf/2.png",
+	"../../assets/img/vf/3.png",
+	"../../assets/img/vf/4.png",
+	"../../assets/img/vf/5.png",
+	"../../assets/img/vf/6.png",
+	"../../assets/img/vf/7.png",
+	"../../assets/img/vf/8.png",
+	"../../assets/img/vf/9.png",
+	"../../assets/img/vf/10.png",
+	"../../assets/img/vf/11.png",
+	"../../assets/img/vf/12.png",
+	"../../assets/img/vf/13.png",
+	"../../assets/img/vf/14.png",
+	"../../assets/img/vf/15.png",
+	"../../assets/img/vf/16.png",
+	"../../assets/img/vf/17.png",
+	"../../assets/img/vf/18.png",
+	"../../assets/img/vf/19.png",
+	"../../assets/img/vf/20.png",
+	"../../assets/img/vf/21.png",
+	"../../assets/img/vf/22.png",
+	"../../assets/img/vf/23.png",
+	"../../assets/img/vf/24.png",
+	"../../assets/img/vf/25.png",
+	"../../assets/img/vf/26.png",
+	"../../assets/img/vf/27.png",
+	"../../assets/img/vf/28.png",
+	"../../assets/img/vf/29.png",
 ]
-;
-var explications = [
-	/* Question  Aitatxo*/
-	"C'est UD Las Palmas.",
-	"C'est UD Las Palmas.",
-	"C'est l'Andalousie avec 5 clubs - Madrid (4).",
-	"4 - Real Madrid, FC Barcelone, Athletic Club et Valence CF.",
-	/* Question Samuel */
-	"Žalgiris Kaunas.", 
-	"Istanbul, Athènes et Belgrade.",
-	"Le Partizan et l'Étoile Rouge à la Štark Arena.",
-	"6 dans l'effectif du Barça et 7 dans celui du Real (sauf si Rubio a signé depuis).",
-	/* Question Samuel */
-	"", 
-	"Gabriel Deck a marqué 24 points, 20 pour Ricky.",
-	"C'est la Nouvelle-Zélande avec 99,4 points par match.",
-	"",
-	/* Question Samuel */
-	"39 (10 en Playoffs et 29 en saison régulière.", 
-	"Et non Denver a gagné en 5 matchs.",
-	"",
-	"",
 
-	];
+reponses = // Ici le paramétrage des couples de cartes Memory
+[ 
+	
+	"B",
+	"F",
+	"A",
+	"I",
+	"J",
+	"M",
+	"K",
+	"L",
+	"E",
+	"C",
+	"D",
+	"A",
+	"F",
+	"H",
+	"J",
+	"G",
+	"G",
+	"I",
+	"O",
+	"L",
+	"D",
+	"N",
+	"O",
+	"H",
+	"C",
+	"N",
+	"M",
+	"K",
+	"E",
+	"B",
+]
 
-for ( var i = 0 ; i < questions.length ; i ++) {
-	var EltR = "reponse" + i ;
-	document.getElementById(EltR).style.display="none";
-	var EltE = "explication" + i ;
-	document.getElementById(EltE).style.display="none";
-	var EltQ = "question" + i ;
-	document.getElementById(EltQ).textContent=questions[i];
+// Initialisation des variables et des constantes
+	const verso_image = "../../assets/img/vf/verso.png"; // Initialisation du verso de l'image
+	var nbrCartes = images_recto.length;// Création de la variable qui reprend le nombre de cartes
+	var i = 0;
+	var tour = 0; // initialisation du nombre de tours soit 0, 1 ou 2 (représente le nombre de cartes retournées dans la manche) 
+
+// Initialisation des indices des cartes retournées
+	var indice_carte1 = -1; // id de la première carte retournée
+	var indice_carte2 = -1; // id de la deuxième carte retournée
+
+// Création du tableau qui résume les cartes affichées ("oui") et les cartes cachées ("non")
+	statut_affichage = []; 
+
+// Création du tableau de deux valeurs qui teste si ces deux cartes sont une paire 
+	cartes_affichees = []; 
+
+
+// Création de la structure HTML
+
+	for (let i = 0; i < nbrCartes; i++) 
+		{
+			// Création du container qui comprend l'image et le filtre vert si la réponse est bonne
+				const container = document.createElement('div');
+				container.className = 'image-container';
+
+			// Création de l'image
+				const img = document.createElement('img'); // Création de l'image
+				img.id = `image${i}`; // Attribution de l'id à l'image
+				img.src = verso_image; // Affichage du verso de la carte
+				container.classList.toggle('clickable'); // permet de changer l'affichage au clic
+
+			// Création de l'élément permettant d'ajouter un voile vert
+				const overlay = document.createElement('div'); // Création de l'objet
+				overlay.className = 'overlay'; // Attribution de la classe de l'objet
+				overlay.id = `overlay${i}`; // Attribution de l'id de l'objet
+
+			// Création des liens entre les objets	
+				container.appendChild(img); // Création de la relation imbriquée container/img
+				container.appendChild(overlay); // Création de la relation imbriquée container/voile
+				gallery.appendChild(container); // Création de la relation imbriquée page/container
+
+			// Remplissage du tableau reprenant le statut d'affichage (non) des cartes 
+				statut_affichage.push("non");
+
+		}
+
+// Création d'un ensemble de tous les éléments "clickables"
+const items = document.querySelectorAll('.clickable');
+
+// 
+
+function cacherCartes() {
+	for (let p = 0; p < nbrCartes; p++) {
+		if (statut_affichage[p] == "cache") {
+			
+			var imageACacher = 'image' + p;
+			var filtreACacher = 'overlay' + p;
+
+			document.getElementById(imageACacher).style.display = "none" ;
+			document.getElementById(filtreACacher).style.display = "none" ;
+
+		};
+
+	}
+	
 }
 
-function question(i) {
-	var EltR = "reponse" + i ;
-	var EltE = "explication" + i ;
-	var EltB = "btn" + i ;
-	if (reponses[i] === "Vrai") {
-		document.getElementById(EltR).textContent="VRAI";
-		document.getElementById(EltR).style.backgroundColor="#56BF8D";
-		document.getElementById(EltR).style.display="block";
-		document.getElementById(EltE).style.display="block";
-		document.getElementById(EltB).style.display="none";}
+function retournerCarte(event) 
+{
+	console.log(cartes_affichees);
+	cacherCartes();
+	const id = event.target.id; // Récupère l'ID de l'élément cliqué
+	const indiceClic = id.match(/\d+/g).join(''); // Récupérer le numéro de l'id
+	const imgSelectionne = document.getElementById(id); // Récupérer la carte à retourner
+	imgSelectionne.src = images_recto[indiceClic]; // Retourner la carte
+	imgSelectionne.requestFullscreen(); // Affichage de l'image en plein écran
 
-	else {
-		document.getElementById(EltR).textContent="FAUX";
-		document.getElementById(EltR).style.backgroundColor="#CB4335";
-		document.getElementById(EltR).style.display="block";
-		document.getElementById(EltE).style.display="block";
-		document.getElementById(EltB).style.display="none";}
+	setTimeout(() => {document.exitFullscreen();}, "3000"); // Quitter le mode plein écran
 
-	var EltE = "explication" + i;
-	document.getElementById(EltE).textContent = explications[i];
+	// Récupération de la valeur de la première carte retournée
+		if (indice_carte1==-1) 
+			{
+				indice_carte1 = indiceClic;
+				cartes_affichees.push(reponses[indiceClic]);
+			} 
+
+	// Récupération de la valeur de la deuxième carte retournée
+		else 
+			{
+				indice_carte2= indiceClic; 
+				if (indice_carte1==indice_carte2) {
+					tour = 0;
+					indice_carte2=-1;
+				}
+
+				else{
+					cartes_affichees.push(reponses[indiceClic]);
+				}
+			
+			}
 	
 	
-	};
+	// Mise à jour du nombre de tours passés dans la manche
+	tour ++;
+
+	// Paramétrage pour éviter des erreurs si 2 clics sur la même carte
+		if (tour ==2 && indice_carte1==indice_carte2)
+		{
+			tour=1;
+			indice_carte2=-1;
+		}
+
+	// Vérification de la valeur des deux cartes
+		else if (tour==2) 
+			{
+				// Si les deux cartes forment une bonne paire, alors ces deux cartes restent affichées
+				if(cartes_affichees[0]==cartes_affichees[1]) 
+					{
+						statut_affichage[indice_carte1] ="oui";
+						statut_affichage[indice_carte2] ="oui";
+
+						var indice_image1 = 'image' + indice_carte1;
+						var filtre_image1 = 'overlay' + indice_carte1;
+
+						var indice_image2 = 'image' + indice_carte2;
+						var filtre_image2 = 'overlay' + indice_carte2;
+
+						document.getElementById(indice_image1).style.opacity = 1;
+						document.getElementById(filtre_image1).style.backgroundColor = '#006400';
+						document.getElementById(filtre_image1).style.opacity = 0.5 ;
+						document.getElementById(filtre_image1).style.display = "block" ;
+						statut_affichage[indice_carte1]="cache";
+
+						document.getElementById(indice_image2).style.opacity = 1;
+						document.getElementById(filtre_image2).style.backgroundColor = '#006400';
+						document.getElementById(filtre_image2).style.opacity = 0.5 ;
+						document.getElementById(filtre_image2).style.display = "block" ;
+						statut_affichage[indice_carte2]="cache";
+
+					}
+
+				else {
+					var indice_image1 = 'image' + indice_carte1;
+					var indice_image2 = 'image' + indice_carte2;
+					setTimeout(() => {
+						document.getElementById(indice_image1).src = verso_image; 
+						document.getElementById(indice_image2).src = verso_image;
+					}, "6000");
+				}
+				
+					
+					// Réinitialisation des valeurs pour un nouveau tour
+					indice_carte1 = -1;
+					indice_carte2 = -1;
+					tour = 0;
+					cartes_affichees =[];
+	
+}
+
+
+}
+// Ajoute un écouteur d'événements à chaque élément
+items.forEach
+	(
+		item => {
+		item.addEventListener('click', retournerCarte);
+		
+			}
+
+		
+	);
+
+
