@@ -135,9 +135,29 @@ function cacherCartes() {
 	
 }
 
+var test_indice_image1 = 0;
+var test_indice_image2 = 0;
+
 function retournerCarte(event) 
 {
-	console.log(cartes_affichees);
+	if (tour == 4) {
+		indice_carte1 = -1;
+		indice_carte2 = -1;
+		tour = 0;
+		cartes_affichees =[];
+		document.getElementById(test_indice_image1).src = verso_image; 
+		document.getElementById(test_indice_image2).src = verso_image;
+
+	}
+
+	if (tour == 3){
+		indice_carte1 = -1;
+		indice_carte2 = -1;
+		tour = 0;
+		cartes_affichees =[];
+	}
+
+
 	cacherCartes();
 	const id = event.target.id; // Récupère l'ID de l'élément cliqué
 	const indiceClic = id.match(/\d+/g).join(''); // Récupérer le numéro de l'id
@@ -145,7 +165,7 @@ function retournerCarte(event)
 	imgSelectionne.src = images_recto[indiceClic]; // Retourner la carte
 	imgSelectionne.requestFullscreen(); // Affichage de l'image en plein écran
 
-	setTimeout(() => {document.exitFullscreen();}, "3000"); // Quitter le mode plein écran
+	setTimeout(() => {document.exitFullscreen();}, "2000"); // Quitter le mode plein écran
 
 	// Récupération de la valeur de la première carte retournée
 		if (indice_carte1==-1) 
@@ -183,17 +203,19 @@ function retournerCarte(event)
 	// Vérification de la valeur des deux cartes
 		else if (tour==2) 
 			{
-				// Si les deux cartes forment une bonne paire, alors ces deux cartes restent affichées
+				var indice_image1 = 'image' + indice_carte1; //
+				var filtre_image1 = 'overlay' + indice_carte1; //
+				test_indice_image1
+				var indice_image2 = 'image' + indice_carte2; //
+				var filtre_image2 = 'overlay' + indice_carte2; //
+				test_indice_image1 = indice_image1;
+				test_indice_image2 = indice_image2;
+						
+			// Si les deux cartes forment une bonne paire, alors ces deux cartes restent affichées
 				if(cartes_affichees[0]==cartes_affichees[1]) 
 					{
 						statut_affichage[indice_carte1] ="oui";
 						statut_affichage[indice_carte2] ="oui";
-
-						var indice_image1 = 'image' + indice_carte1;
-						var filtre_image1 = 'overlay' + indice_carte1;
-
-						var indice_image2 = 'image' + indice_carte2;
-						var filtre_image2 = 'overlay' + indice_carte2;
 
 						document.getElementById(indice_image1).style.opacity = 1;
 						document.getElementById(filtre_image1).style.backgroundColor = '#006400';
@@ -206,24 +228,15 @@ function retournerCarte(event)
 						document.getElementById(filtre_image2).style.opacity = 0.5 ;
 						document.getElementById(filtre_image2).style.display = "block" ;
 						statut_affichage[indice_carte2]="cache";
+						tour = 3;
 
 					}
 
 				else {
-					var indice_image1 = 'image' + indice_carte1;
-					var indice_image2 = 'image' + indice_carte2;
-					setTimeout(() => {
-						document.getElementById(indice_image1).src = verso_image; 
-						document.getElementById(indice_image2).src = verso_image;
-					}, "6000");
+					tour = 4; //
 				}
 				
-					
-					// Réinitialisation des valeurs pour un nouveau tour
-					indice_carte1 = -1;
-					indice_carte2 = -1;
-					tour = 0;
-					cartes_affichees =[];
+				
 	
 }
 
