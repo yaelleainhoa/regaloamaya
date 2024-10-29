@@ -138,6 +138,32 @@ function cacherCartes() {
 var test_indice_image1 = 0;
 var test_indice_image2 = 0;
 
+function agrandirCarte (event) {
+	
+	const target = event.currentTarget;
+	const enfants = target.children;
+	const idImageComplet = enfants[0].id;
+	const idImage = enfants[0].id.match(/\d+/g).join('');
+
+	const popup = document.getElementById('popup');
+
+
+	if (idImage == indice_carte1 || idImage == indice_carte2) {
+		const popup = document.getElementById('popup');
+		popup.style.display = "block";
+		document.getElementById('popup-image').src = images_recto[idImage];	
+
+	}
+	
+
+}
+
+function reduireCarte (event) {
+	popup.style.display = "none";
+	console.log(popup.style.display);
+	
+}
+
 function retournerCarte(event) 
 {
 	if (tour == 4) {
@@ -163,9 +189,7 @@ function retournerCarte(event)
 	const indiceClic = id.match(/\d+/g).join(''); // Récupérer le numéro de l'id
 	const imgSelectionne = document.getElementById(id); // Récupérer la carte à retourner
 	imgSelectionne.src = images_recto[indiceClic]; // Retourner la carte
-	imgSelectionne.requestFullscreen(); // Affichage de l'image en plein écran
 
-	setTimeout(() => {document.exitFullscreen();}, "2000"); // Quitter le mode plein écran
 
 	// Récupération de la valeur de la première carte retournée
 		if (indice_carte1==-1) 
@@ -247,10 +271,9 @@ items.forEach
 	(
 		item => {
 		item.addEventListener('click', retournerCarte);
+		item.addEventListener('mouseenter', agrandirCarte);
+		item.addEventListener('mouseleave', reduireCarte);
 		
-			}
-
-		
-	);
+			});
 
 

@@ -41,3 +41,24 @@
 }
 
 
+#popup {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Assure que le pop-up est au-dessus du contenu */
+    padding: 15px;
+    width: 80%;
+}
+#popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+
