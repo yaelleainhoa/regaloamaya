@@ -14,7 +14,7 @@ export const games = [
     ["intrus", "En quelle année ?"],
     ["questions_indiv", "Questions à thème"],
     ["wiki", "Quel voix off"],
-    // ["fais_deviner", "Jeu vide"],
+    ["fais_deviner", "Jeu de drapeau"],
     ["framed", "Framed like"], 
    // dessin one piece yaelle
     
