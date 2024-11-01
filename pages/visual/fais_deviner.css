@@ -1,26 +1,25 @@
-/* Mise en place de l'image */
-
-.ecran {
-	margin-top: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 20px;
+#socle {
+    text-align: center;
 }
 
-.center {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-around;
-	font-family: Police1;
-}
-	
-#container, #containerreponse{
-	margin:2vh;
+.styled-button {
+    background-color: #4CAF50; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    padding: 15px 32px; /* Espacement intérieur */
+    text-align: center; /* Centre le texte */
+    text-decoration: none; /* Supprime le soulignement */
+    display: inline-block; /* Permet de définir des dimensions */
+    font-size: 16px; /* Taille de la police */
+    border-radius: 8px; /* Arrondir les coins */
+    transition: background-color 0.3s ease; /* Animation de transition */
+    cursor: pointer; /* Curseur de pointeur au survol */
 }
 
-#affichage_reponse {
-	font-family: Police1;
-	display: inline-flex;
-	padding: 20px;
+.styled-button:hover {
+    background-color: #45a049; /* Couleur au survol */
+}
+
+.container-reponse {
+    text-align: center;
 }
