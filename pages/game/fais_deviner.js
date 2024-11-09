@@ -28,6 +28,7 @@ const zones = [
     { id: '10', top: '398px', left: '249px' },
     { id: '11', top: '388px', left: '67px' },
     { id: '12', top: '284px', left: '40px' },
+    { id: '13', top: '10px', left: '580px' },
 ];
 
 const drapeaux = [
@@ -139,16 +140,21 @@ container_drapeaux.style.margin = "20px"; // Ajouter un espacement autour
     drapeauZone.className = 'draggable';
     drapeauZone.id = drapeaux[index].split('/').pop().split('.')[0];
     drapeauZone.src = drapeaux[index];
+   
     drapeauZone.style.width = '60px'; // Largeur de la zone de drop
     drapeauZone.style.height = '48px'; // Hauteur de la zone de drop
     drapeauZone.style.borderRadius = '10px'; 
     drapeauZone.style.margin = '10px'; 
     container_drapeaux.appendChild(drapeauZone);
+    
+
+    
 
     // Événement pour le drag
     drapeauZone.addEventListener('dragstart', (event) => {
         event.dataTransfer.setData('text/plain', event.target.id); // Stocker l'id de l'image
     });
+    
 
     container_drapeaux.appendChild(drapeauZone);
 
@@ -161,9 +167,15 @@ function reponse() {
     for (i = 0; i< const_propositions.length; i++) {
         
         if (const_propositions[i] == const_reponses[i]) {
-            console.log("here");
             score = score + 1;
-            console.log(score)
+            document.getElementById(const_propositions[i]).style.opacity = "0.9";
+            document.getElementById(const_propositions[i]).style.border = "10px solid #28a745";
+            document.getElementById(const_propositions[i]).style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+            
+        }
+
+        else {
+
         }
 
         
