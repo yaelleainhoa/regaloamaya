@@ -2,7 +2,8 @@
     manches = [
         "Choisir la manche",
         "Retrouver les drapeaux",
-        "Retrouver les personnages de Murder"
+        "Retrouver les personnages de Murder",
+        "Retrouver les métiers de Friends",
     ]
 
 // Définition des images de fond
@@ -11,6 +12,7 @@
         "../../assets/img/letsplay.png",
         "../../assets/img/drapeau/manche0.png",
         "../../assets/img/drapeau/manche1.png",
+        "../../assets/img/drapeau/manche2.png",
     ]
 
 // Définition des manches  
@@ -48,8 +50,9 @@
                 const_propositions = []    
 
                 if (mancheActuelle == 1) {var nbImages = zones_1 - 1}
-                else if (mancheActuelle == 2) {var nbImages = zones_2- 1}; 
-                    for (i = 0; i < nbImages ; i++)
+                else if (mancheActuelle == 2) {var nbImages = zones_2- 1}
+                else if (mancheActuelle == 3) {var nbImages = zones_3- 1}; 
+                for (i = 0; i < nbImages ; i++)
                         {const_propositions[i] = i}
 
             // Affichage de l'image liée à la manche
@@ -121,6 +124,42 @@ const zones_2 = [
 
 ];
 
+const zones_3 = [
+    { id: '0', top: '25px', left: '39px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '1', top: '25px', left: '131px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '2', top: '25px', left: '229px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '3', top: '25px', left: '626px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '4', top: '25px', left: '724px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '5', top: '25px', left: '827px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '6', top: '137px', left: '38px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '7', top: '137px', left: '138px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '8', top: '137px', left: '236px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '9', top: '137px', left: '331px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '10', top: '137px', left: '433px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '11', top: '137px', left: '531px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '12', top: '137px', left: '628px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '13', top: '137px', left: '727px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '14', top: '137px', left: '827px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '15', top: '269px', left: '38px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '16', top: '269px', left: '137px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '17', top: '269px', left: '234px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '18', top: '269px', left: '334px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '19', top: '269px', left: '433px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '20', top: '269px', left: '531px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },  
+    { id: '21', top: '269px', left: '626px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '22', top: '269px', left: '728px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '23', top: '269px', left: '824px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '24', top: '388px', left: '33px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '25', top: '388px', left: '136px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '26', top: '388px', left: '253px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '27', top: '388px', left: '378px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '28', top: '388px', left: '504px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '29', top: '388px', left: '608px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '30', top: '388px', left: '707px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '31', top: '388px', left: '816px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+    { id: '32', top: '57px', left: '498px', height: '38px', width: '26px', border: '3px dashed red', borderRadius:'10%' },
+];
+
 const images_1 = [
     "../../assets/img/drapeau/belize.png",
     "../../assets/img/drapeau/bhoutan.png",
@@ -161,6 +200,44 @@ const images_2 = [
 
 ];
 
+const images_3 = [
+    "../../assets/img/drapeau/al.png",
+    "../../assets/img/drapeau/alice.png",
+    "../../assets/img/drapeau/amy.png",
+    "../../assets/img/drapeau/barry.png",
+    "../../assets/img/drapeau/caitlin.png",
+    "../../assets/img/drapeau/chandler.png",
+    "../../assets/img/drapeau/chloe.png",
+    "../../assets/img/drapeau/david.png",
+    "../../assets/img/drapeau/doug.png",
+    "../../assets/img/drapeau/duncan.png",
+    "../../assets/img/drapeau/earl.png",
+    "../../assets/img/drapeau/eric.png",
+    "../../assets/img/drapeau/frances.png",
+    "../../assets/img/drapeau/gary.png",
+    "../../assets/img/drapeau/glenda.png",
+    "../../assets/img/drapeau/janine.png",
+    "../../assets/img/drapeau/julie.png",
+    "../../assets/img/drapeau/larry.png",
+    "../../assets/img/drapeau/leo.png",
+    "../../assets/img/drapeau/treeger.png",
+    "../../assets/img/drapeau/mike.png",
+    "../../assets/img/drapeau/mischa.png",
+    "../../assets/img/drapeau/nora.png",
+    "../../assets/img/drapeau/paul.png",
+    "../../assets/img/drapeau/pete.png",
+    "../../assets/img/drapeau/russell.png",
+    "../../assets/img/drapeau/ryan.png",
+    "../../assets/img/drapeau/sandy.png",
+    "../../assets/img/drapeau/sarah.png",
+    "../../assets/img/drapeau/susie.png",
+    "../../assets/img/drapeau/terry.png",
+    "../../assets/img/drapeau/tim.png",
+    
+
+];
+
+
 const_reponses = []
 
 const_reponses_1 =[
@@ -178,7 +255,7 @@ const_reponses_1 =[
     "paraguay",
     "gambie"
 
-]
+];
 
 const_reponses_2 =[
     "gabriel",
@@ -204,7 +281,44 @@ const_reponses_2 =[
 
 
 
+];
+
+const_reponses_3 = [
+    "al",
+    "paul",
+    "russell",
+    "doug",
+    "frances",
+    "susie",
+    "pete",
+    "treeger",
+    "janine",
+    "duncan",
+    "leo",
+    "nora",
+    "earl",
+    "chloe",
+    "glenda",
+    "terry",
+    "larry",
+    "chandler",
+    "caitlin",
+    "sandy",
+    "tim",
+    "barry",
+    "julie",
+    "mike",
+    "gary",
+    "alice",
+    "sarah",
+    "eric",
+    "david",
+    "ryan",
+    "amy",
+    "mischa"
+
 ]
+
 
 const_propositions = [
     "0",
@@ -229,6 +343,7 @@ const_propositions = [
             var zones_manche = [];
             if (mancheActuelle ==1) {zones_manche = zones_1}
             else if (mancheActuelle==2) {zones_manche = zones_2}
+            else if (mancheActuelle==3) {zones_manche = zones_3}
             zones_manche.forEach(zone => {
                 const dropZone = document.createElement('div');
                 dropZone.className = 'drop-zone';
@@ -291,7 +406,7 @@ const_propositions = [
     function afficherImages() {
         if (mancheActuelle ==1) {images_manche = images_1}
         else if (mancheActuelle==2) {images_manche = images_2}
-
+        else if (mancheActuelle==3) {images_manche = images_3}
     
     images_manche.forEach((drapeau, index) => {
     const drapeauZone = document.createElement('img');
@@ -305,6 +420,13 @@ const_propositions = [
         drapeauZone.style.borderRadius = '10px'; 
     }
     else if (mancheActuelle==2) {
+        drapeauZone.style.width = '50px'; // Largeur de la zone de drop
+        drapeauZone.style.height = 'auto'; // Hauteur de la zone de drop
+        drapeauZone.style.maxHeight = '60px';
+        drapeauZone.style.borderRadius = '50px'; 
+    }
+
+    else if (mancheActuelle==3) {
         drapeauZone.style.width = '50px'; // Largeur de la zone de drop
         drapeauZone.style.height = 'auto'; // Hauteur de la zone de drop
         drapeauZone.style.maxHeight = '60px';
@@ -333,6 +455,7 @@ socle.appendChild(container_drapeaux);
         var score = 0;
         if (mancheActuelle ==1) {const_reponses = const_reponses_1}
         else if (mancheActuelle ==2) {const_reponses = const_reponses_2}
+        else if (mancheActuelle ==3) {const_reponses = const_reponses_3}
         for (i = 0; i< const_propositions.length; i++) {   
             var constATester = const_propositions[i].replace(/\d/g, '');
             if (constATester == const_reponses[i]) {
@@ -351,8 +474,8 @@ socle.appendChild(container_drapeaux);
         }
 
 
-         if (score == const_reponses.length) {alert("Gagné !");}
-            else {alert("Perdu !");
+         if (score == const_reponses.length) {alert("Gagné !"); console.log(score)}
+            else {alert("Perdu !");; console.log(score)
             }
 
     }
@@ -367,8 +490,8 @@ image.addEventListener('click', function(event) {
     const mouseY = event.clientY;
 
     // Coordonnées du clic par rapport à l'image
-    const relativeX = mouseX - rect.left - 56; // Position X par rapport à l'image
-    const relativeY = mouseY - rect.top - 32.5;  // Position Y par rapport à l'image
+    const relativeX = mouseX - rect.left ; // Position X par rapport à l'image
+    const relativeY = mouseY - rect.top ;  // Position Y par rapport à l'image
 
     // Affichage des coordonnées dans la console
     console.log(`Coordonnée X: ${relativeX}, Coordonnée Y: ${relativeY}`);
