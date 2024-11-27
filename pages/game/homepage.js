@@ -14,7 +14,7 @@ function setGames()
         jeu.classList.add("jeu");
 
         var gameImgNb = i%13;
-        jeu.style.backgroundImage = "url('regaloaitor/assets/img/game"+gameImgNb+".png')"
+        jeu.style.backgroundImage = "url('/regaloaitor/assets/img/game"+gameImgNb+".png')"
 
         var title = document.createElement("h1");
         title.innerHTML = "Jeu "+(i+1).toString();
