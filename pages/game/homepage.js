@@ -1,8 +1,7 @@
-import { games } from "../../assets/variables.js";
 // to launch locally
 // import { games } from "../../assets/variables.js";
 // To change for githubpages
-// import { games } from "/regaloaitor/assets/variables.js";
+import { games } from "/regaloaitor/assets/variables.js";
 
 function setGames()
 {

@@ -12,9 +12,9 @@ export const games = [
     ["framed", "Framed like"], 
     ["audio", "Reconnais-tu ce son ?"],
     ["intrus", "En quelle année ?"],
-    
+    ["devineperso", "Persos dessinés"],
     ["questions_indiv", "Questions à thème"],
-    ["wiki", "Quel voix off"],
+    ["wiki", "Quelle voix off"],
     ["fais_deviner", "Jeu de drapeau"],
     ["frise", "Quel médecin ?"],
     

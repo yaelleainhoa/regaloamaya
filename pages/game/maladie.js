@@ -51,7 +51,7 @@ var reponses = [
 	}
 
 	function suivant() {
-		if(id<images.length)
+		if(id<images.length-1)
 		{
 			id++;
 			raz();
