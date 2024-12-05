@@ -1,7 +1,7 @@
 // to launch locally
-// import { games } from "../../assets/variables.js";
+import { games } from "../../assets/variables.js";
 // to change for githubpages
-import { games } from "/regaloaitor/assets/variables.js";
+// import { games } from "/regaloamaya/assets/variables.js";
 
 function getCurrentPageIndex() {
     const currentPage = window.location.href;

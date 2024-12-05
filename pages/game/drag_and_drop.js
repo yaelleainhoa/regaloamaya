@@ -1,38 +1,37 @@
 images  = [
-	"../../assets/img/drag_and_drop/99.png", //1
-	"../../assets/img/drag_and_drop/friends.png", //2
-	"../../assets/img/drag_and_drop/mentalist.png", //3
-	"../../assets/img/drag_and_drop/dh.png", //4
-	"../../assets/img/drag_and_drop/bbt.png", //5
-	"../../assets/img/drag_and_drop/ga.png", //6
-	"../../assets/img/drag_and_drop/got.png", //7
-	"../../assets/img/drag_and_drop/monk.png", //8
+	"../../assets/img/drag_and_drop/dorayaki.png", //1
+	"../../assets/img/drag_and_drop/edamame.png", //1
+	"../../assets/img/drag_and_drop/gyoza.png", //1
+	"../../assets/img/drag_and_drop/miso.png", //1
+	"../../assets/img/drag_and_drop/natto.png", //1
+	"../../assets/img/drag_and_drop/ramen.png", //1
+	"../../assets/img/drag_and_drop/shabushabu.png", //1
+	"../../assets/img/drag_and_drop/takoyaki.png", //1
+	"../../assets/img/drag_and_drop/tempura.png", //1
+	"../../assets/img/drag_and_drop/tonkatsu.png", //1
+	"../../assets/img/drag_and_drop/tsukemen.png", //1
 
-]
-
-reponses = [
-	"Saison 1", // 0
-	"Saison 2", // 1
-	"Saison 3", // 2 
-	"Saison 4", // 3
-	"Saison 5", // 4
-	"Saison 6", // 5
-	"Saison 7", // 6
-	"Saison 8", //7
 
 ]
 
 bonnes_reponses = [
-	"Saison 6", // 5
-	"Saison 4", // 3
-	"Saison 7", // 6
-	"Saison 8", //7
-	"Saison 2", // 1
-	"Saison 5", // 4
-	"Saison 3", // 2 
-	"Saison 1", // 0
-
+	"Dorayaki", // 0
+	"Edamame",
+	"Gyoza",
+	"Miso",
+	"Natto",
+	"Ramen",
+	"Shabu shabu",
+	"Takoyaki",
+	"Tempura",
+	"Tonkatsu",
+	"Tsukemen",
 ]
+
+let reponses = bonnes_reponses
+.map(value => ({ value, sort: Math.random() }))
+.sort((a, b) => a.sort - b.sort)
+.map(({ value }) => value)
 
 score  = [
 	"",
@@ -112,6 +111,7 @@ function dragDrop(ev) {
 	if(reponse_select)
 	{
 		var data = ev.dataTransfer.getData("text");
+		console.log(data)
 		ev.target.appendChild(document.getElementById(data));
 		ev.target.style.paddingBottom = "5px";
 	}

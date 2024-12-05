@@ -1,7 +1,7 @@
 // to launch locally
-// import { games } from "../../assets/variables.js";
+import { games } from "../../assets/variables.js";
 // To change for githubpages
-import { games } from "/regaloaitor/assets/variables.js";
+// import { games } from "/regaloamaya/assets/variables.js";
 
 function setGames()
 {
@@ -13,12 +13,12 @@ function setGames()
         var jeu = document.createElement("div");
         jeu.classList.add("jeu");
 
-        var gameImgNb = i%13;
+        var gameImgNb = i%5;
         jeu.style.backgroundImage = "url('assets/img/game"+gameImgNb+".png')"
 
-        var title = document.createElement("h1");
-        title.innerHTML = "Jeu "+(i+1).toString();
-        jeu.appendChild(title);
+        // var title = document.createElement("h1");
+        // title.innerHTML = "Jeu "+(i+1).toString();
+        // jeu.appendChild(title);
 
         var gameButton = document.createElement("button");
         gameButton.classList.add("gameBtn");

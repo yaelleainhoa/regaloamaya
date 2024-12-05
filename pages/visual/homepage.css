@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: rgb(70, 19, 158);
+    color: rgb(158, 19, 19);
     background-color: rgb(255,255,255);
 }
 
@@ -28,9 +28,9 @@ body {
     background-position: center;
     font-family: Police1;
     position: relative;
-    margin: 30px;
-    height: 300px;
-    width: 300px;
+    margin: 80px;
+    height: 200px;
+    width: 200px;
 }
 
 .jeu:after
@@ -40,7 +40,7 @@ body {
     left: 0;
     right:0;
     bottom: 0;
-    background: hsl(0, 100%, 86%); 
+    background: hsl(0, 87%, 57%); 
     border-radius: 70% 70% 70% 70%;
     content: '';
     opacity: 0;
@@ -83,10 +83,10 @@ body {
     position: relative;
     display: inline-block;
     width: auto; height: auto;
-    background-color: transparent;
+    background-color: #ef1a1a8f;
     border: none;
     cursor: pointer;
-    margin: 0px 25px 15px;
+    /* margin: 0px 25px 15px; */
     min-width: 150px;
     z-index: 20;
 }

@@ -10,17 +10,6 @@ images  = [
 
 ]
 
-reponses = [
-	"5000 ans avant ",
-	"830 ans avant",
-	"500 ans avant",
-	"113 ans avant",
-	"46 ans avant",
-	"33 ans avant",
-	"15 ans avant",
-	"10 ans avant",
-	
-]
 
 bonnes_reponses = [
 	"113 ans avant", 
@@ -33,6 +22,11 @@ bonnes_reponses = [
 	"15 ans avant",
 
 ]
+
+let reponses = bonnes_reponses
+.map(value => ({ value, sort: Math.random() }))
+.sort((a, b) => a.sort - b.sort)
+.map(({ value }) => value)
 
 score  = [
 	"",
