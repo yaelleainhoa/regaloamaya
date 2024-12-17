@@ -1,159 +1,190 @@
 var questions_reponses = [
-	["Décathlon - Dans quelle ville se trouve le siège social ?", 
-	[
-		"Villeneuve d'Ascq",
-		"Bayonne",
-		"Tourcoing",
-		"Marc en Baroeul"
-	]],
-	["Décathlon - Quelle est la marque préférée de Central Cee ?", 
+    ["Question 1 - Calcular MN", 
+        [
+            "AM · BC / AB",
+            "AB · BC / AM",
+            "AM · AM / BC",
+            "AB · AC / AM"
+        ]
+    ],
+    ["Question 2 - Calcular la derivada de sin(x²)", 
+        [
+            "2x · cos(x²)",
+            "cos(x²)",
+            "2x · sin(x²)",
+            "e^x"
+        ]
+    ],
+    ["Question 3 - Calcular la integral de 1/x", 
+        [
+            "ln(x)",
+            "1 / x²",
+            "e^x",
+            "x"
+        ]
+    ],
+    ["Question 4 - Resolver el sistema: {x + y = 7, x − y = 1}", 
+        [
+            "x = 6, y = 1",
+            "x = 1, y = 6",
+            "No existe",
+            "x = 5, y = 2"
+        ]
+    ],
+    ["Question 5 - En coordenadas polares, ¿qué es ρ = 1?", 
+        [
+            "El círculo unidad centrado en el origen.",
+            "Un círculo normal.",
+            "La elipse unidad centrada en el origen.",
+            "Una recta."
+        ]
+    ],
+    ["Question 6 - En coordenadas polares, ¿qué es θ = 1?", 
+        [
+            "La semirrecta que sale del origen con ángulo 45°",
+            "Una espiral.",
+            "Un círculo de radio 1",
+            "Una recta."
+        ]
+    ],
+    ["Question 7 - ¿Cuál es la fórmula de la transferencia de calor?", 
+        [
+            "Q = m × c × ∆T",
+            "T = m × c × ∆Q",
+            "Q = ∆m × c × T",
+            "Q = m × ∆c × T"
+        ]
+    ],
+    ["Question 8 - ¿Cuál es la fórmula de la primera ley de la termodinámica?", 
+        [
+            "Q = ∆U + W",
+            "∆Q = ∆U + ∆W",
+            "Q = U + W",
+            "Q = U + ∆W"
+        ]
+    ],
+    ["Question 9 - HCl + NaOH → ???", 
+        [
+            "NaCl + H₂O",
+            "NH₂l + ClO",
+            "NaClH + HO",
+            "NaCl + H₄O₂ − 2H₂O"
+        ]
+    ],
+    ["Question 10 - ¿Cómo se llama la fórmula lógica: {p ⇒ q, p} ⇒ q", 
+        [
+            "Modus tollendo tollens",
+            "Modus ponendo ponens",
+            "Alea jacta est",
+            "Tu quoque fili mi"
+        ]
+],
+	["Question 1 - Produit uniquement dans les fermes du 15 avril au 15 novembre, et à la condition expresse que les vaches puissent être nourries à satiété d’herbe pâturée. Ce fromage tire son nom d’une cité médiévale accrochée à 930 m d’altitude au cœur des monts du Cantal.", 
 		[
-			"Quechua",
-			"Prada",
-			"Dior",
-			"Kalenji"
-	]],
-	["Cuisine - Quelle est la spécialité de Kevin dans The Office ?", 
+			"Le Gaperon",
+			"Le Cantal",
+			"La Fourme",
+			"Le Salers"
+		]
+	],
+	["Question 4 - Rendu célèbre à la table de Louis XIV par le Maréchal de France Henri de la Ferté-Sénecterre.", 
 		[
-			"Chili",
-			"Bolognaise",
-			"Cheesecake",
-			"Tacos"
-	]],
-	["Cuisine - De quel dessert Bree essaie de voler la recette chez Katherine ?", 
+			"La Fourme d’Ambert",
+			"Carré d’Aurillac",
+			"Le Saint Nectaire",
+			"La Fourme de Montbrison"
+		]
+	],
+	["Question 5 - Le gaperon tire son nom ...", 
 		[
-			"Tarte au citron meringuée",
-			"Gâteau renversé à l'ananas",
-			"Muffins aux myrtilles",
-			"Cheesecake à la fraise"
-	]],
-	["Cuisine - Quel est le plat qu'aime le - Luffy selon Oda ?", 
+			"Du Gapençais, fromage de Gap",
+			"Du mot auvergnat 'gapa' qui signifie babeurre",
+			"De l’anglais 'gap', car il est issu d’une erreur",
+			"De GAPO, Groupe archéologique des Pyrénées occidentales"
+		]
+	],
+	["Question 6 - Véritable village composé de plus de soixante-dix pièces disposées sur cinq étages, reliées entre eux par des couloirs et des escaliers en colimaçon.", 
 		[
-			"Tarte aux cerises",
-			"Salade",
-			"Gigot d'agneau",
-			"Prune séchée"
-	]],
-	["Cuisine - Que mangent Chandler et Rachel dans un couloir ?", 
+			"Des crottes jaunâtres",
+			"L’Abbatiale romane Saint-Austremoine",
+			"Les grottes de Jonas",
+			"La Basilique Notre-Dame d’Orcival"
+		]
+	],
+	["Question 7 - Le plus grand centre ... d’Europe se trouve en Auvergne :", 
 		[
-			"Cheesecake",
-			"Pizza",
-			"Mac and Cheese",
-			"Diplomate"
-	]],
-	["LOL - Qui est présent dans LOL et dans LOL ?", 
+			"Bouddhiste",
+			"Évangélique",
+			"Catholique",
+			"Musulman"
+		]
+	],
+	["Question 8 - Ce vieux village médiéval, abritant un four à pain, une chapelle, le site fortifié d’un château, un moulin, un bief, ... a été abandonné par l’homme il y a 70 ans.", 
 		[
-			"Pierre Niney",
-			"Eric Judor",
-			"Jinx",
-			"Vi"
-	]],
-	["LOL - Quel excellent acteur de la bande à Fifi a terminé 3e de la 1ère saison de LOL qui rit sort ?", 
+			"Lavaudieu",
+			"Blesle",
+			"Issandolanges",
+			"Usson"
+		]
+	],
+	["Question 9 - Renommé pour sa moutarde séculaire, ses maisons à colombages, ses ruelles pavées.", 
 		[
-			"Tarek Boudali",
-			"Gérard Jugnot",
-			"Philippe Lacheau (fifi)",
-			"Julien Arruti"
-	]],
-	["LOL - Dans quelle ville partent en voyage scolaire Lola et ses copains dans le film LOL ?", 
+			"Montpeyroux",
+			"Usson",
+			"Charroux",
+			"Chiengeône"
+		]
+	],
+	["Question 10 - Station thermale élégante nichée au cœur des montagnes, invitant à la détente et à la régénération.", 
 		[
-			"Londres",
-			"Barcelone",
-			"Berlin",
-			"New York"
-	]],
-	["LOL - Que signifie l'acronyme LOL dans le sens MDR ?", 
+			"La Bouboule",
+			"La Bourboule",
+			"La Gorgone",
+			"Saint-Éloy-les-Mines"
+		]
+	],
+	["Question 12 - La 'Chaîne des Puys d’Auvergne' est l’ensemble volcanique le plus diversifié d’Europe. Mais il n’abrite pas de volcans de type ...", 
 		[
-			"Laughing Out Loud",
-			"Loose Our Lord",
-			"Lost Our Laugh",
-			"Love Our Lambs"
-	]],
-	["LOL - Qui joue le rôle de Lola dans LOL USA ?", 
+			"De maars",
+			"Strombolien",
+			"Plinien",
+			"Peléen"
+		]
+	],
+	["Question 13 - On distingue deux grands types d’éruptions: explosives et effusives. Une éruption effusive ...", 
 		[
-			"Miley Cyrus",
-			"Demi Moore",
-			"Julia Robers",
-			"Taylor Swift"
-	]],
-	["Politique - Dans l'annonce pour trouver des collocs, quelle condition impose Meredith Grey ?", 
+			"Est liée à une hausse de décibel",
+			"Rejette de la lave fluide",
+			"Émet des particules, appelées 'passions'",
+			"Libère une grande quantité de gaz"
+		]
+	],
+	["Question 14 - La 'Chaîne des Puys d’Auvergne' abrite des volcans à éruptions ...", 
 		[
-			"Ne pas Voter Bush",
-			"Voter Obama",
-			"Etre démocrate",
-			"Voter aux élections"
-	]],
-	["Politique - Qui a joué dans Days of our Lives (comme Joey finalement) ?", 
+			"Aknéyennes",
+			"Effusives",
+			"Explosives",
+			"Cutanées"
+		]
+	],
+	["Question 15 - Aujourd’hui 26 décembre 2024, il y a un train 'panoramique des dômes' toutes les ...", 
 		[
-			"Donald Trump",
-			"Arnold Schwazenegger",
-			"Cynthia Nixon",
-			"Kal Penn"
-	]],
-	["Politique - Pour quelles élections se présente Bree à la fin de Desperate Housewives ?", 
+			"Heures",
+			"Il ne circule pas",
+			"20 minutes",
+			"40 minutes"
+		]
+	],
+	["Question 16 - Le peuplement de l’Auvergne est attesté dès le Paléolithique. Les vestiges de ... représenteraient la plus ancienne trace d’habitat en Europe.", 
 		[
-			"Chambre Basse des Représentants du Kentucky",
-			"Chambre Haute du corps législatif du Kentucky (Sénat)",
-			"Présidente de l'état du Kentucky",
-			"Présidente des USA rien que ça"
-	]],
-	["Politique - Avant d'aider Annalise Keating, d'où a été virée Olivia Pope ?", 
-		[
-			"Maison Blanche",
-			"Maire de Washington",
-			"Cour suprême",
-			"Respo com de l'ESBVA"
-	]],
-	["Sport - Quelle est l'équipe de basketball préférée de Joey Tribiani ?", 
-		[
-			"Les NY Knicks",
-			"Les Brooklyn Nets",
-			"Les Los Angles Lakers",
-			"Les Chicago Bulls"
-	]],
-	["Sport - De quel personnage de B99 l'acteur a joué en NFL ?", 
-		[
-			"Terry",
-			"Holt",
-			"Hitchcock",
-			"La Vautour (Vulture)"
-	]],
-	["Sport - Complète ce nom de film qu'on adorait petits: 'Joue la comme ...'", 
-		[
-			"Beckham",
-			"Mbappé",
-			"Pelé",
-			"Maradonna"
-	]],
-	["Sport - A combien de joueurs par équipe se joue le Boufbowl ?", 
-		[
-			"5",
-			"6",
-			"7",
-			"8"
-	]],
-	["Art - Dans quel endroit Moriarty vole les joyaux de la couronne dans Sherlock ?", 
-		[
-			"Jewel House",
-			"British Museum",
-			"Victoria & Albert Museum",
-			"Buckigham Palace"
-	]],
-	["Art - De quel medium est inspiré le nom de série 'Grey's anatomy' ?", 
-		[
-			"Livre",
-			"Chanson",
-			"Film",
-			"Photographie"
-	]],
-	["Art - Dans les romans tirés de la série Monk, de quel point de vue suit on l'histoire ?", 
-		[
-			"Natalie",
-			"Adrien Monk",
-			"La fille de Trudy",
-			"Stottlemeyer"
-	]]
-];
+			"Averne",
+			"Alesia",
+			"Gergovie",
+			"Chilhac"
+		]
+	],
+]
+
 
 
 var id = 0;

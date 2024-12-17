@@ -8,19 +8,16 @@
 /* Tableau */
 
 #answers_tab{
-	margin-top:20px;
+	display: grid; /* Active CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 10px; /* Espacement entre les éléments (optionnel) */
+	margin: 20px auto;
 	color:black;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-height:40vh;
-	overflow: hidden;
-	align-items: center;
 	background-color: var(--color-background);
 }
 
 .cell{
-	width: 100px;
+	width: 130px;
 	height:40px;
 	align-items: center;
 	text-align: center;
@@ -29,6 +26,7 @@
 
 .line{
 	display: flex;
+	/* background-color: var(--color-background); */
 }
 
 input{

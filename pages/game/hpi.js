@@ -1,4 +1,4 @@
-let nbAnswer =11;
+let nbAnswer =10;
 images = []
 for(let i = 0; i < nbAnswer; i++)
 {
@@ -16,7 +16,7 @@ let reponses = bonnes_reponses
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
 
-	score = []
+score = []
 for(let i = 0; i < nbAnswer; i++)
 {
 	score.push("")
@@ -82,6 +82,8 @@ function dragDrop(ev) {
 	ev.preventDefault();
 
 	reponse_select = ev.target.id
+	if(reponse_select.includes("drag"))
+		reponse_select = ""
 	indice = reponse_select.substr(-1)
 
 	if(reponse_select)
@@ -94,7 +96,7 @@ function dragDrop(ev) {
 	imageToDrag_selected = document.getElementById(data).src;
 	score[indice] = imageToDrag_selected
 	console.log(data + " /// " +imageToDrag_selected);
-
+	console.log(score)
 }
 
 
@@ -115,8 +117,11 @@ function resultat_final()
 		imageToDropArea.appendChild(prop);
 		imageToDropArea.appendChild(answer);
 
+		// console.log(bonnes_reponses[i])
+		// console.log(score)
 		if (bonnes_reponses[i].split("/").pop() == score[i].split("/").pop()) 
 		{
+
 			carreau = "prop" + i.toString()
 			document.getElementById(carreau).style.backgroundColor = "#C6E5BA"
 		}

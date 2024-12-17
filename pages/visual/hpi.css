@@ -15,7 +15,7 @@
 	align-items: center;
 	padding: 5px;
 	/* padding-right:200px; */
-	min-width: 15vw;
+	min-width: 5vw;
 	background-color: azure;
 }
 
@@ -49,7 +49,7 @@
 }
 
 img {
-	width: 200px;
+	width: 150px;
 }
 
 .draggable{
