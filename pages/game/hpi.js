@@ -2,13 +2,13 @@ let nbAnswer =10;
 images = []
 for(let i = 0; i < nbAnswer; i++)
 {
-	images.push("../../assets/img/hpi/victime"+String(i)+".png")
+	images.push("../../assets/img/HPI/victime"+String(i)+".png")
 }
 
 bonnes_reponses = []
 for(let i = 0; i < nbAnswer; i++)
 {
-	bonnes_reponses.push("../../assets/img/hpi/tueur"+String(i)+".png")
+	bonnes_reponses.push("../../assets/img/HPI/tueur"+String(i)+".png")
 }
 
 let reponses = bonnes_reponses
