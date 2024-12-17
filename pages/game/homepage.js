@@ -1,7 +1,7 @@
 // to launch locally
-import { games } from "../../assets/variables.js";
+// import { games } from "../../assets/variables.js";
 // To change for githubpages
-// import { games } from "/regaloamaya/assets/variables.js";
+import { games } from "/regaloamaya/assets/variables.js";
 
 function setGames()
 {
